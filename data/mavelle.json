@@ -1,0 +1,1131 @@
+{
+  "navbar": {
+    "brandName": "Mavelle",
+    "brandSubtitle": "CAFÉ & BISTRO",
+    "tagline": "GOOD FOOD • GREAT COFFEE • BETTER MOMENTS",
+    "logo": "/images/logo (1).png",
+    "logoFallback": "/logo.png",
+    "links": [
+      { "name": "Home", "href": "#home", "active": true },
+      { "name": "About Us", "href": "#about" },
+      { "name": "Our Menu", "href": "#menu" },
+      { "name": "Our Chefs", "href": "#chefs" },
+      { "name": "Gallery", "href": "#gallery" },
+      { "name": "Testimonials", "href": "#testimonials" },
+      { "name": "Blog", "href": "#blog" },
+      { "name": "Contact Us", "href": "#contact" }
+    ],
+    "cta": {
+      "text": "Book a Table",
+      "href": "#reservation"
+    }
+  },
+  "hero": {
+    "tagline": "GOOD FOOD  ◇  GREAT COFFEE  ◇  BETTER MOMENTS",
+    "titleLine1": "Fresh Flavours",
+    "titleLine2": "Bigger Moments",
+    "description": "Delicious food, handcrafted coffee and a warm ambience come together to make every visit special.",
+    "backgroundImage": "/images/Hero_Banner.png",
+    "primaryCta": {
+      "text": "EXPLORE OUR MENU",
+      "href": "#menu"
+    },
+    "secondaryCta": {
+      "text": "RESERVE A TABLE",
+      "href": "#reservation"
+    }
+  },
+  "features": [
+    {
+      "id": "ingredients",
+      "icon": "leaves",
+      "title": "Fresh Ingredients",
+      "subtitle": "Locally sourced & seasonal"
+    },
+    {
+      "id": "coffee",
+      "icon": "coffee",
+      "title": "Specialty Coffee",
+      "subtitle": "Brewed to perfection"
+    },
+    {
+      "id": "food",
+      "icon": "food",
+      "title": "Delicious Food",
+      "subtitle": "Made with love"
+    },
+    {
+      "id": "ambience",
+      "icon": "ambience",
+      "title": "Cozy Ambience",
+      "subtitle": "A perfect place to relax"
+    }
+  ],
+  "menuSection": {
+    "subheading": "Our Menu",
+    "titleLine1": "A Taste for ",
+    "titleLine2": "Every Mood",
+    "description": "From freshly brewed coffees to indulgent bakes and seasonal specials, our menu is crafted to delight every craving.",
+    "ctaText": "VIEW FULL MENU",
+    "categories": [
+      {
+        "id": 1,
+        "title": "Coffee & Beverages",
+        "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop",
+        "alt": "Coffee & Beverages"
+      },
+      {
+        "id": 2,
+        "title": "Breakfast",
+        "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=800&auto=format&fit=crop",
+        "alt": "Breakfast Pancakes"
+      },
+      {
+        "id": 3,
+        "title": "Main Course",
+        "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop",
+        "alt": "Main Course Pasta and Bowls"
+      },
+      {
+        "id": 4,
+        "title": "Desserts",
+        "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop",
+        "alt": "Chocolate Cake Dessert"
+      }
+    ]
+  },
+  "aboutSection": {
+    "subheading": "ABOUT MAVELLE",
+    "titlePart1": "A Cozy Café",
+    "titlePart2": "with a Big Heart",
+    "description": "At Mavelle Café & Bistro, we believe great food brings people together. Our space is designed to be warm, welcoming and inspiring — a place to enjoy quality coffee, delicious meals and meaningful conversations.",
+    "features": [
+      {
+        "id": 1,
+        "title": "Warm & Welcoming Ambience",
+        "icon": "heart"
+      },
+      {
+        "id": 2,
+        "title": "Fresh, High-Quality Ingredients",
+        "icon": "leaf"
+      },
+      {
+        "id": 3,
+        "title": "Perfect for Families, Friends & Work",
+        "icon": "users"
+      },
+      {
+        "id": 4,
+        "title": "Events & Private Bookings",
+        "icon": "calendar"
+      }
+    ],
+    "ctaText": "OUR STORY",
+    "images": {
+      "main": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1000&auto=format&fit=crop",
+      "secondary": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop"
+    }
+  },
+  "reservationBanner": {
+    "subheading": "RESERVATION",
+    "titlePart1": "Good Food",
+    "titlePart2": "Brings People Together",
+    "description": "Book your table and experience the perfect blend of delicious food, freshly brewed coffee and a warm, cozy ambience at Mavelle Café & Bistro.",
+    "ctaText": "RESERVE A TABLE",
+    "backgroundImage": "/images/Reservation.png"
+  },
+  "chefsSection": {
+    "subheading": "OUR CHEFS",
+    "titlePart1": "Meet Our ",
+    "titlePart2": "Culinary Experts",
+    "description": "Our talented chefs bring passion, creativity and years of experience to craft delicious dishes that make every visit special.",
+    "chefs": [
+      {
+        "id": 1,
+        "name": "Arjun Malhotra",
+        "role": "EXECUTIVE CHEF",
+        "signature": "Arjun",
+        "bio": "With over 12 years of culinary experience, Chef Arjun creates modern dishes with a perfect balance of tradition and innovation.",
+        "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800&auto=format&fit=crop",
+        "alt": "Executive Chef Arjun Malhotra"
+      },
+      {
+        "id": 2,
+        "name": "Meera Kapoor",
+        "role": "SOUS CHEF",
+        "signature": "Meera",
+        "bio": "Chef Meera specializes in fresh, seasonal ingredients, turning simple flavors into unforgettable dining experiences.",
+        "image": "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?q=80&w=800&auto=format&fit=crop",
+        "alt": "Sous Chef Meera Kapoor"
+      },
+      {
+        "id": 3,
+        "name": "Rohan Sinha",
+        "role": "PASTRY CHEF",
+        "signature": "Rohan",
+        "bio": "From classic desserts to contemporary treats, Chef Rohan's creations add a sweet ending to your perfect meal.",
+        "image": "https://images.unsplash.com/photo-1607631568010-a87245c0daf8?q=80&w=800&auto=format&fit=crop",
+        "alt": "Pastry Chef Rohan Sinha"
+      },
+      {
+        "id": 4,
+        "name": "Kavya Desai",
+        "role": "SPECIALITY CHEF",
+        "signature": "Kavya",
+        "bio": "Chef Kavya brings a creative touch to global cuisines, crafting unique dishes that delight every palate.",
+        "image": "https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?q=80&w=800&auto=format&fit=crop",
+        "alt": "Speciality Chef Kavya Desai"
+      }
+    ]
+  },
+  "gallerySection": {
+    "subheading": "OUR GALLERY",
+    "titlePart1": "Moments from ",
+    "titlePart2": "Our Café",
+    "description": "Take a look at the warm ambience, delicious food and memorable moments that make Mavelle Café & Bistro a special place.",
+    "featured": {
+      "id": 1,
+      "title": "Bistro Dining Hall",
+      "image": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=1000&auto=format&fit=crop",
+      "alt": "Warm restaurant interior with wooden tables and large windows"
+    },
+    "topRow": [
+      {
+        "id": 2,
+        "title": "Specialty Latte Art",
+        "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop",
+        "alt": "Steaming green cup with latte art on wooden table"
+      },
+      {
+        "id": 3,
+        "title": "Berry Pancakes",
+        "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=800&auto=format&fit=crop",
+        "alt": "Stack of fluffy pancakes with fresh berries and maple syrup"
+      },
+      {
+        "id": 4,
+        "title": "Candlelit Dining Setting",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop",
+        "alt": "Warm candlelit dinner setting with glassware and flowers"
+      },
+      {
+        "id": 5,
+        "title": "Decadent Chocolate Cake",
+        "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop",
+        "alt": "Layered chocolate cake slice with rich ganache"
+      }
+    ],
+    "bottomRow": [
+      {
+        "id": 6,
+        "title": "Gourmet Savory Plate",
+        "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop",
+        "alt": "Chef prepared gourmet roasted chicken with microgreens and roasted tomatoes"
+      },
+      {
+        "id": 7,
+        "title": "Artisanal Specialty Drinks",
+        "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop",
+        "alt": "Three tall glasses of iced latte, matcha frappe, and berry smoothie"
+      },
+      {
+        "id": 8,
+        "title": "Tufted Green Booths",
+        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=800&auto=format&fit=crop",
+        "alt": "Cozy café booths with green velvet upholstery and warm ambient lighting"
+      },
+      {
+        "id": 9,
+        "title": "Toasted Panini Sandwich",
+        "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=800&auto=format&fit=crop",
+        "alt": "Grilled panini sandwich with cheese, tomatoes and dressed green salad"
+      }
+    ]
+  },
+  "testimonialsSection": {
+    "subheading": "TESTIMONIALS",
+    "titlePart1": "Loved by ",
+    "titlePart2": "Our Guests",
+    "description": "Here's what our guests have to say about their experience at Mavelle Café & Bistro.",
+    "testimonials": [
+      {
+        "id": 1,
+        "name": "Priya Sharma",
+        "location": "Delhi, India",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+        "review": "Amazing food, beautiful ambience and such a warm atmosphere! Mavelle Café & Bistro is my go-to place for weekend brunch with friends. The coffee and desserts are simply outstanding."
+      },
+      {
+        "id": 2,
+        "name": "Rohit Mehta",
+        "location": "Mumbai, India",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+        "review": "The perfect spot for great food and even better company. Everything we tried was delicious, especially the pasta and coffee. The ambience makes it a truly special place."
+      },
+      {
+        "id": 3,
+        "name": "Ananya Kapoor",
+        "location": "Bengaluru, India",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
+        "review": "A wonderful café with delicious food, excellent service and a cosy vibe. Mavelle Café & Bistro never disappoints. It's the perfect place to relax, catch up and enjoy great meals."
+      },
+      {
+        "id": 4,
+        "name": "Kabir Verma",
+        "location": "Pune, India",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+        "review": "The artisanal coffees and gourmet meals are unparalleled. Every detail from the decor to the presentation creates an unforgettable bistro experience."
+      }
+    ]
+  },
+  "blogsSection": {
+    "subheading": "OUR BLOGS",
+    "titlePart1": "Stories, ",
+    "titlePart2": "Flavors & Inspiration",
+    "description": "Explore our latest blogs for food stories, coffee inspiration, café updates and more.",
+    "blogs": [
+      {
+        "id": 1,
+        "date": {
+          "day": "12",
+          "monthYear": "AUG 2026"
+        },
+        "category": "COFFEE",
+        "title": "The Art of a Perfect Cup of Coffee",
+        "excerpt": "Discover the journey from bean to cup and what makes a truly great coffee experience.",
+        "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop",
+        "alt": "The Art of a Perfect Cup of Coffee",
+        "link": "/blog/perfect-cup-of-coffee"
+      },
+      {
+        "id": 2,
+        "date": {
+          "day": "05",
+          "monthYear": "AUG 2026"
+        },
+        "category": "FOOD",
+        "title": "Top 5 Brunch Dishes You Must Try",
+        "excerpt": "From classic favorites to chef's specials, explore our most loved brunch dishes.",
+        "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=800&auto=format&fit=crop",
+        "alt": "Top 5 Brunch Dishes You Must Try",
+        "link": "/blog/top-5-brunch-dishes"
+      },
+      {
+        "id": 3,
+        "date": {
+          "day": "28",
+          "monthYear": "JUL 2026"
+        },
+        "category": "LIFESTYLE",
+        "title": "How a Cozy Ambience Elevates Dining",
+        "excerpt": "A warm and welcoming ambience can turn a good meal into an unforgettable experience.",
+        "image": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop",
+        "alt": "How a Cozy Ambience Elevates Dining",
+        "link": "/blog/cozy-ambience-elevates-dining"
+      }
+    ]
+  },
+  "footerSection": {
+    "logo": "/images/logo-white.png",
+    "description": "At Mavelle Café & Bistro, we bring people together with great food, freshly brewed coffee and a warm, welcoming ambience.",
+    "socials": [
+      { "id": "facebook", "name": "Facebook", "icon": "facebook", "href": "https://facebook.com" },
+      { "id": "instagram", "name": "Instagram", "icon": "instagram", "href": "https://instagram.com" },
+      { "id": "pinterest", "name": "Pinterest", "icon": "pinterest", "href": "https://pinterest.com" },
+      { "id": "youtube", "name": "YouTube", "icon": "youtube", "href": "https://youtube.com" }
+    ],
+    "quickLinks": [
+      { "name": "Home", "href": "/" },
+      { "name": "About Us", "href": "/about" },
+      { "name": "Our Menu", "href": "/menu" },
+      { "name": "Gallery", "href": "/gallery" },
+      { "name": "Blogs", "href": "/blog" },
+      { "name": "Testimonials", "href": "/testimonials" },
+      { "name": "Contact Us", "href": "/contact" }
+    ],
+    "menuLinks": [
+      { "name": "Coffee & Beverages", "href": "#menu" },
+      { "name": "Breakfast", "href": "#menu" },
+      { "name": "Main Course", "href": "#menu" },
+      { "name": "Desserts", "href": "#menu" },
+      { "name": "Specials", "href": "#menu" },
+      { "name": "Seasonal Menu", "href": "#menu" },
+      { "name": "Chef's Recommendation", "href": "#menu" }
+    ],
+    "contact": {
+      "address": "123 Flavor Street, Green Park, New Delhi 110016",
+      "phone": "+91 98765 43210",
+      "email": "hello@mavellecafe.in",
+      "hoursDays": "Mon - Sun",
+      "hoursTime": "9:00 AM - 11:00 PM"
+    },
+    "visit": {
+      "title": "Visit Our Café",
+      "image": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop",
+      "alt": "Warm restaurant dining area with wooden tables",
+      "ctaText": "BOOK A TABLE",
+      "ctaHref": "#reservation"
+    },
+    "copyright": "© 2026 Mavelle Café & Bistro. All Rights Reserved.",
+    "footerNote": "Designed with ❤️ for Food Lovers"
+  },
+  "menuPage": {
+    "banner": {
+      "title": "OUR MENU",
+      "breadcrumb": [
+        { "label": "HOME", "href": "/" },
+        { "label": "MENU", "href": "/menu" }
+      ],
+      "backgroundImage": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=1600&auto=format&fit=crop"
+    },
+    "intro": {
+      "badge": "OUR MENU",
+      "titlePart1": "A Menu Crafted",
+      "titlePart2": "With Passion",
+      "description": "From freshly brewed coffee to hearty meals and decadent desserts, every dish is prepared with the finest ingredients to bring you a memorable dining experience.",
+      "highlights": [
+        "FRESH INGREDIENTS",
+        "GREAT TASTE",
+        "BETTER MOMENTS"
+      ]
+    },
+    "sections": [
+      {
+        "id": "coffee-beverages",
+        "titlePart1": "Coffee &",
+        "titlePart2": "Beverages",
+        "subtitle": "RICH AROMA, PERFECT START",
+        "items": [
+          {
+            "id": "espresso",
+            "name": "Espresso",
+            "price": "₹120",
+            "description": "A bold and rich shot of pure coffee.",
+            "image": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "cappuccino",
+            "name": "Cappuccino",
+            "price": "₹180",
+            "description": "Perfect blend of espresso, steamed milk and velvety foam.",
+            "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "iced-latte",
+            "name": "Iced Latte",
+            "price": "₹180",
+            "description": "Chilled espresso with milk over ice.",
+            "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "cold-brew",
+            "name": "Cold Brew",
+            "price": "₹180",
+            "description": "Refreshingly smooth and bold.",
+            "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "cafe-latte",
+            "name": "Café Latte",
+            "price": "₹180",
+            "description": "Smooth espresso with steamed milk.",
+            "image": "https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "americano",
+            "name": "Americano",
+            "price": "₹150",
+            "description": "Espresso with hot water for a classic taste.",
+            "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "mocha",
+            "name": "Mocha",
+            "price": "₹200",
+            "description": "Chocolate and espresso, a perfect duo.",
+            "image": "https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "hot-chocolate",
+            "name": "Hot Chocolate",
+            "price": "₹160",
+            "description": "Creamy and indulgent.",
+            "image": "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?q=80&w=600&auto=format&fit=crop"
+          }
+        ]
+      },
+      {
+        "id": "breakfast",
+        "titlePart1": "Breakfast",
+        "titlePart2": "",
+        "subtitle": "A DELICIOUS START TO YOUR DAY",
+        "items": [
+          {
+            "id": "classic-pancakes",
+            "name": "Classic Pancakes",
+            "price": "₹220",
+            "description": "Fluffy pancakes served with fresh fruits and maple syrup.",
+            "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "avocado-toast",
+            "name": "Avocado Toast",
+            "price": "₹240",
+            "description": "Sourdough bread topped with mashed avocado, cherry tomatoes and herbs.",
+            "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "english-breakfast",
+            "name": "English Breakfast",
+            "price": "₹260",
+            "description": "Eggs, sausages, grilled tomatoes, mushrooms and toast.",
+            "image": "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "omelette",
+            "name": "Omelette",
+            "price": "₹220",
+            "description": "Choice of classic, cheese or vegetable omelette, served with toast.",
+            "image": "https://images.unsplash.com/photo-1510693206972-df098062cb71?q=80&w=600&auto=format&fit=crop"
+          }
+        ]
+      },
+      {
+        "id": "main-course",
+        "titlePart1": "Main",
+        "titlePart2": "Course",
+        "subtitle": "FLAVORFUL DISHES, CRAFTED WITH CARE",
+        "items": [
+          {
+            "id": "grilled-chicken",
+            "name": "Grilled Chicken",
+            "price": "₹340",
+            "description": "Juicy grilled chicken with seasonal vegetables and herbs.",
+            "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "pasta-alfredo",
+            "name": "Pasta Alfredo",
+            "price": "₹320",
+            "description": "Creamy Alfredo sauce with mushrooms and parmesan.",
+            "image": "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "margherita-pizza",
+            "name": "Margherita Pizza",
+            "price": "₹300",
+            "description": "Classic pizza with fresh tomatoes, mozzarella and basil.",
+            "image": "https://images.unsplash.com/photo-1604382355076-af4b0eb60143?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "veg-burger",
+            "name": "Veg Burger",
+            "price": "₹280",
+            "description": "Signature veggie patty with fresh lettuce, tomato and our special sauce.",
+            "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600&auto=format&fit=crop"
+          }
+        ]
+      },
+      {
+        "id": "desserts",
+        "titlePart1": "Desserts",
+        "titlePart2": "",
+        "subtitle": "SWEET ENDINGS, ALWAYS A GOOD IDEA",
+        "items": [
+          {
+            "id": "chocolate-brownie",
+            "name": "Chocolate Brownie",
+            "price": "₹180",
+            "description": "Warm brownie served with vanilla ice cream.",
+            "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "ny-cheesecake",
+            "name": "New York Cheesecake",
+            "price": "₹200",
+            "description": "Rich and creamy cheesecake with berry compote.",
+            "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "tiramisu",
+            "name": "Tiramisu",
+            "price": "₹200",
+            "description": "Classic Italian dessert with coffee and mascarpone.",
+            "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=600&auto=format&fit=crop"
+          },
+          {
+            "id": "seasonal-fruit-bowl",
+            "name": "Seasonal Fruit Bowl",
+            "price": "₹160",
+            "description": "A refreshing mix of seasonal fresh fruits.",
+            "image": "https://images.unsplash.com/photo-1519996529931-28324d5a630e?q=80&w=600&auto=format&fit=crop"
+          }
+        ]
+      }
+    ]
+  },
+  "aboutPage": {
+    "banner": {
+      "title": "ABOUT US",
+      "breadcrumb": [
+        { "label": "HOME", "href": "/" },
+        { "label": "ABOUT US" }
+      ],
+      "backgroundImage": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=1600&auto=format&fit=crop"
+    },
+    "story": {
+      "subheading": "ABOUT MAVELLE",
+      "titlePart1": "A Cozy Café",
+      "titlePart2": "with a Big Heart",
+      "paragraphs": [
+        "At Mavelle Café & Bistro, we believe great food brings people together. Our space is designed to be warm, welcoming and inspiring — a place to enjoy quality coffee, delicious meals and meaningful conversations.",
+        "At Mavelle Café & Bistro, we believe great food brings people together. Our space is designed to be warm, welcoming and inspiring — a place to enjoy quality coffee, delicious meals and meaningful conversations.",
+        "At Mavelle Café & Bistro, we believe great food brings people together. Our space is designed to be warm, welcoming and inspiring — a place to enjoy quality coffee, delicious meals and meaningful conversations."
+      ],
+      "images": {
+        "main": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1000&auto=format&fit=crop",
+        "secondary": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop"
+      }
+    }
+  },
+  "chefsPage": {
+    "banner": {
+      "title": "OUR CHEFS",
+      "breadcrumb": [
+        { "label": "HOME", "href": "/" },
+        { "label": "CHEFS" }
+      ],
+      "backgroundImage": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=1600&auto=format&fit=crop"
+    },
+    "subheading": "OUR CHEFS",
+    "titlePart1": "Meet Our ",
+    "titlePart2": "Culinary Experts",
+    "description": "Our talented chefs bring passion, creativity and years of experience to craft delicious dishes that make every visit special.",
+    "chefs": [
+      {
+        "id": 1,
+        "name": "Arjun Malhotra",
+        "role": "EXECUTIVE CHEF",
+        "bio": "With over 12 years of culinary experience, Chef Arjun creates modern dishes with a perfect balance of tradition and innovation.",
+        "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800&auto=format&fit=crop",
+        "alt": "Executive Chef Arjun Malhotra"
+      },
+      {
+        "id": 2,
+        "name": "Meera Kapoor",
+        "role": "SOUS CHEF",
+        "bio": "Chef Meera specializes in fresh, seasonal ingredients, turning simple flavors into unforgettable dining experiences.",
+        "image": "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?q=80&w=800&auto=format&fit=crop",
+        "alt": "Sous Chef Meera Kapoor"
+      },
+      {
+        "id": 3,
+        "name": "Rohan Sinha",
+        "role": "PASTRY CHEF",
+        "bio": "From classic desserts to contemporary treats, Chef Rohan's creations add a sweet ending to your perfect meal.",
+        "image": "https://images.unsplash.com/photo-1607631568010-a87245c0daf8?q=80&w=800&auto=format&fit=crop",
+        "alt": "Pastry Chef Rohan Sinha"
+      },
+      {
+        "id": 4,
+        "name": "Kavya Desai",
+        "role": "SPECIALITY CHEF",
+        "bio": "Chef Kavya brings a creative touch to global cuisines, crafting unique dishes that delight every palate.",
+        "image": "https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?q=80&w=800&auto=format&fit=crop",
+        "alt": "Speciality Chef Kavya Desai"
+      },
+      {
+        "id": 5,
+        "name": "Arjun Malhotra",
+        "role": "EXECUTIVE CHEF",
+        "bio": "With over 12 years of culinary experience, Chef Arjun creates modern dishes with a perfect balance of tradition and innovation.",
+        "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800&auto=format&fit=crop",
+        "alt": "Executive Chef Arjun Malhotra"
+      },
+      {
+        "id": 6,
+        "name": "Meera Kapoor",
+        "role": "SOUS CHEF",
+        "bio": "Chef Meera specializes in fresh, seasonal ingredients, turning simple flavors into unforgettable dining experiences.",
+        "image": "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?q=80&w=800&auto=format&fit=crop",
+        "alt": "Sous Chef Meera Kapoor"
+      },
+      {
+        "id": 7,
+        "name": "Rohan Sinha",
+        "role": "PASTRY CHEF",
+        "bio": "From classic desserts to contemporary treats, Chef Rohan's creations add a sweet ending to your perfect meal.",
+        "image": "https://images.unsplash.com/photo-1607631568010-a87245c0daf8?q=80&w=800&auto=format&fit=crop",
+        "alt": "Pastry Chef Rohan Sinha"
+      },
+      {
+        "id": 8,
+        "name": "Kavya Desai",
+        "role": "SPECIALITY CHEF",
+        "bio": "Chef Kavya brings a creative touch to global cuisines, crafting unique dishes that delight every palate.",
+        "image": "https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?q=80&w=800&auto=format&fit=crop",
+        "alt": "Speciality Chef Kavya Desai"
+      }
+    ]
+  },
+  "galleryPage": {
+    "banner": {
+      "title": "GALLERY",
+      "breadcrumb": [
+        { "label": "HOME", "href": "/" },
+        { "label": "GALLERY" }
+      ],
+      "backgroundImage": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=1600&auto=format&fit=crop"
+    },
+    "subheading": "OUR GALLERY",
+    "titlePart1": "Moments from ",
+    "titlePart2": "Our Café",
+    "description": "Take a look at the warm ambience, delicious food and memorable moments that make Mavelle Café & Bistro a special place.",
+    "images": [
+      {
+        "id": 1,
+        "title": "Specialty Latte Art",
+        "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop",
+        "alt": "Steaming green cup with latte art on wooden table"
+      },
+      {
+        "id": 2,
+        "title": "Berry Pancakes",
+        "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=800&auto=format&fit=crop",
+        "alt": "Stack of fluffy pancakes with fresh berries and maple syrup"
+      },
+      {
+        "id": 3,
+        "title": "Candlelit Dining Setting",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop",
+        "alt": "Warm candlelit dinner setting with glassware and flowers"
+      },
+      {
+        "id": 4,
+        "title": "Decadent Chocolate Cake",
+        "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop",
+        "alt": "Layered chocolate cake slice with rich ganache"
+      },
+      {
+        "id": 5,
+        "title": "Gourmet Savory Plate",
+        "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop",
+        "alt": "Chef prepared gourmet roasted chicken with microgreens and roasted tomatoes"
+      },
+      {
+        "id": 6,
+        "title": "Artisanal Specialty Drinks",
+        "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop",
+        "alt": "Three tall glasses of iced latte, matcha frappe, and berry smoothie"
+      },
+      {
+        "id": 7,
+        "title": "Tufted Green Booths",
+        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=800&auto=format&fit=crop",
+        "alt": "Cozy café booths with green velvet upholstery and warm ambient lighting"
+      },
+      {
+        "id": 8,
+        "title": "Toasted Panini Sandwich",
+        "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=800&auto=format&fit=crop",
+        "alt": "Toasted panini sandwich with fresh salad on wooden table"
+      },
+      {
+        "id": 9,
+        "title": "Specialty Latte Art",
+        "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop",
+        "alt": "Steaming green cup with latte art on wooden table"
+      },
+      {
+        "id": 10,
+        "title": "Berry Pancakes",
+        "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=800&auto=format&fit=crop",
+        "alt": "Stack of fluffy pancakes with fresh berries and maple syrup"
+      },
+      {
+        "id": 11,
+        "title": "Candlelit Dining Setting",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop",
+        "alt": "Warm candlelit dinner setting with glassware and flowers"
+      },
+      {
+        "id": 12,
+        "title": "Decadent Chocolate Cake",
+        "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop",
+        "alt": "Layered chocolate cake slice with rich ganache"
+      },
+      {
+        "id": 13,
+        "title": "Gourmet Savory Plate",
+        "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop",
+        "alt": "Chef prepared gourmet roasted chicken with microgreens and roasted tomatoes"
+      },
+      {
+        "id": 14,
+        "title": "Artisanal Specialty Drinks",
+        "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop",
+        "alt": "Three tall glasses of iced latte, matcha frappe, and berry smoothie"
+      },
+      {
+        "id": 15,
+        "title": "Tufted Green Booths",
+        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=800&auto=format&fit=crop",
+        "alt": "Cozy café booths with green velvet upholstery and warm ambient lighting"
+      },
+      {
+        "id": 16,
+        "title": "Toasted Panini Sandwich",
+        "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=800&auto=format&fit=crop",
+        "alt": "Toasted panini sandwich with fresh salad on wooden table"
+      }
+    ]
+  },
+  "testimonialsPage": {
+    "banner": {
+      "title": "TESTIMONIALS",
+      "breadcrumb": [
+        { "label": "HOME", "href": "/" },
+        { "label": "TESTIMONIALS" }
+      ],
+      "backgroundImage": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=1600&auto=format&fit=crop"
+    },
+    "subheading": "TESTIMONIALS",
+    "titlePart1": "Loved by ",
+    "titlePart2": "Our Guests",
+    "description": "Here's what our guests have to say about their experience at Mavelle Café & Bistro.",
+    "testimonials": [
+      {
+        "id": 1,
+        "name": "Priya Sharma",
+        "location": "Delhi, India",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+        "review": "Amazing food, beautiful ambience and such a warm atmosphere! Mavelle Café & Bistro is my go-to place for weekend brunch with friends. The coffee and desserts are simply outstanding."
+      },
+      {
+        "id": 2,
+        "name": "Rohit Mehta",
+        "location": "Mumbai, India",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+        "review": "The perfect spot for great food and even better company. Everything we tried was delicious, especially the pasta and coffee. The ambience makes it a truly special place."
+      },
+      {
+        "id": 3,
+        "name": "Ananya Kapoor",
+        "location": "Bengaluru, India",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
+        "review": "A wonderful café with delicious food, excellent service and a cosy vibe. Mavelle Café & Bistro never disappoints. It's the perfect place to relax, catch up and enjoy great meals."
+      },
+      {
+        "id": 4,
+        "name": "Priya Sharma",
+        "location": "Delhi, India",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+        "review": "Amazing food, beautiful ambience and such a warm atmosphere! Mavelle Café & Bistro is my go-to place for weekend brunch with friends. The coffee and desserts are simply outstanding."
+      },
+      {
+        "id": 5,
+        "name": "Rohit Mehta",
+        "location": "Mumbai, India",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+        "review": "The perfect spot for great food and even better company. Everything we tried was delicious, especially the pasta and coffee. The ambience makes it a truly special place."
+      },
+      {
+        "id": 6,
+        "name": "Ananya Kapoor",
+        "location": "Bengaluru, India",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
+        "review": "A wonderful café with delicious food, excellent service and a cosy vibe. Mavelle Café & Bistro never disappoints. It's the perfect place to relax, catch up and enjoy great meals."
+      },
+      {
+        "id": 7,
+        "name": "Priya Sharma",
+        "location": "Delhi, India",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+        "review": "Amazing food, beautiful ambience and such a warm atmosphere! Mavelle Café & Bistro is my go-to place for weekend brunch with friends. The coffee and desserts are simply outstanding."
+      },
+      {
+        "id": 8,
+        "name": "Rohit Mehta",
+        "location": "Mumbai, India",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+        "review": "The perfect spot for great food and even better company. Everything we tried was delicious, especially the pasta and coffee. The ambience makes it a truly special place."
+      },
+      {
+        "id": 9,
+        "name": "Ananya Kapoor",
+        "location": "Bengaluru, India",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
+        "review": "A wonderful café with delicious food, excellent service and a cosy vibe. Mavelle Café & Bistro never disappoints. It's the perfect place to relax, catch up and enjoy great meals."
+      }
+    ]
+  },
+  "contactPage": {
+    "banner": {
+      "title": "CONTACT US",
+      "breadcrumb": [
+        { "label": "HOME", "href": "/" },
+        { "label": "CONTACT US" }
+      ],
+      "backgroundImage": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=1600&auto=format&fit=crop"
+    },
+    "info": {
+      "titlePart1": "Contact ",
+      "titlePart2": "Information",
+      "description": "Visit us, call us or drop us a message. Our team is always happy to assist you.",
+      "items": [
+        {
+          "id": "location",
+          "title": "Our Location",
+          "lines": ["123 Greenwood Avenue,", "Rajendra Place, New Delhi – 110008"]
+        },
+        {
+          "id": "phone",
+          "title": "Call Us",
+          "lines": ["+91 98765 43210", "+91 11 4567 8910"]
+        },
+        {
+          "id": "email",
+          "title": "Email Us",
+          "lines": ["hello@mavellecafe.com", "reservations@mavellecafe.com"]
+        }
+      ]
+    },
+    "form": {
+      "titlePart1": "Send Us a ",
+      "titlePart2": "Message",
+      "description": "Fill out the form and we'll get back to you as soon as possible.",
+      "subjects": [
+        "General Inquiry",
+        "Table Reservation",
+        "Private Event / Party",
+        "Feedback & Suggestions",
+        "Catering Service"
+      ],
+      "buttonText": "SEND MESSAGE"
+    },
+    "map": {
+      "title": "Find Us Here",
+      "description": "Conveniently located in the heart of the city, Mavelle Café & Bistro is the perfect place to unwind with great food and coffee.",
+      "buttonText": "GET DIRECTIONS",
+      "directionsUrl": "https://maps.google.com"
+    }
+  },
+  "reservationPage": {
+    "banner": {
+      "title": "BOOK A TABLE",
+      "breadcrumb": [
+        { "label": "HOME", "href": "/" },
+        { "label": "BOOK A TABLE" }
+      ],
+      "backgroundImage": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=1600&auto=format&fit=crop"
+    },
+    "booking": {
+      "titlePart1": "Reserve ",
+      "titlePart2": "Your Table",
+      "description": "Fill out the form and we'll confirm your reservation shortly.",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop",
+      "cardTitle": "A Perfect Place To Share Good Food",
+      "cardDescription": "Whether it's a casual meet-up, family dinner or a special celebration, we're here to make it memorable.",
+      "buttonText": "BOOK A TABLE"
+    },
+    "features": [
+      {
+        "id": "food",
+        "icon": "utensils",
+        "title": "Delicious Food",
+        "subtitle": "Fresh ingredients, great taste"
+      },
+      {
+        "id": "ambience",
+        "icon": "coffee",
+        "title": "Cozy Ambience",
+        "subtitle": "A warm and relaxing environment"
+      },
+      {
+        "id": "all",
+        "icon": "users",
+        "title": "Perfect for All",
+        "subtitle": "Ideal for families, friends or business meets"
+      },
+      {
+        "id": "reservation",
+        "icon": "calendar-check",
+        "title": "Easy Reservation",
+        "subtitle": "Quick and hassle-free booking"
+      }
+    ],
+    "planVisit": {
+      "titlePart1": "Plan ",
+      "titlePart2": "Your Visit",
+      "description": "Mavelle Café & Bistro is the perfect place to unwind with great food, aromatic coffee and a welcoming atmosphere. Make a reservation and let us take care of the rest.",
+      "image": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=1000&auto=format&fit=crop",
+      "location": {
+        "title": "Our Location",
+        "line1": "123 Greenwood Avenue,",
+        "line2": "Rajendra Place, New Delhi – 110008"
+      },
+      "hours": {
+        "title": "Opening Hours",
+        "line1": "Monday – Friday: 8:00 AM – 10:00 PM",
+        "line2": "Saturday: 8:00 AM – 11:00 PM",
+        "line3": "Sunday: 8:00 AM – 10:00 PM"
+      },
+      "help": {
+        "title": "Need Help?",
+        "phone1": "+91 98765 43210",
+        "phone2": "+91 11 4567 8910"
+      }
+    }
+  },
+  "blogPage": {
+    "banner": {
+      "title": "BLOGS",
+      "breadcrumb": [
+        { "label": "HOME", "href": "/" },
+        { "label": "BLOGS" }
+      ],
+      "backgroundImage": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=1600&auto=format&fit=crop"
+    },
+    "subheading": "OUR BLOGS",
+    "titlePart1": "Stories, ",
+    "titlePart2": "Flavors & Inspiration",
+    "description": "Explore our latest blogs for food stories, coffee inspiration, café updates and more.",
+    "blogs": [
+      {
+        "id": 1,
+        "date": {
+          "day": "12",
+          "monthYear": "AUG 2026"
+        },
+        "category": "COFFEE",
+        "title": "The Art of a Perfect Cup of Coffee",
+        "excerpt": "Discover the journey from bean to cup and what makes a truly great coffee experience.",
+        "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop",
+        "alt": "The Art of a Perfect Cup of Coffee",
+        "link": "/blog/perfect-cup-of-coffee"
+      },
+      {
+        "id": 2,
+        "date": {
+          "day": "05",
+          "monthYear": "AUG 2026"
+        },
+        "category": "FOOD",
+        "title": "Top 5 Brunch Dishes You Must Try",
+        "excerpt": "From classic favorites to chef's specials, explore our most loved brunch dishes.",
+        "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=800&auto=format&fit=crop",
+        "alt": "Top 5 Brunch Dishes You Must Try",
+        "link": "/blog/top-5-brunch-dishes"
+      },
+      {
+        "id": 3,
+        "date": {
+          "day": "28",
+          "monthYear": "JUL 2026"
+        },
+        "category": "LIFESTYLE",
+        "title": "How a Cozy Ambience Elevates Dining",
+        "excerpt": "A warm and welcoming ambience can turn a good meal into an unforgettable experience.",
+        "image": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop",
+        "alt": "How a Cozy Ambience Elevates Dining",
+        "link": "/blog/cozy-ambience-elevates-dining"
+      },
+      {
+        "id": 4,
+        "date": {
+          "day": "12",
+          "monthYear": "AUG 2026"
+        },
+        "category": "COFFEE",
+        "title": "The Art of a Perfect Cup of Coffee",
+        "excerpt": "Discover the journey from bean to cup and what makes a truly great coffee experience.",
+        "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop",
+        "alt": "The Art of a Perfect Cup of Coffee",
+        "link": "/blog/perfect-cup-of-coffee"
+      },
+      {
+        "id": 5,
+        "date": {
+          "day": "05",
+          "monthYear": "AUG 2026"
+        },
+        "category": "FOOD",
+        "title": "Top 5 Brunch Dishes You Must Try",
+        "excerpt": "From classic favorites to chef's specials, explore our most loved brunch dishes.",
+        "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=800&auto=format&fit=crop",
+        "alt": "Top 5 Brunch Dishes You Must Try",
+        "link": "/blog/top-5-brunch-dishes"
+      },
+      {
+        "id": 6,
+        "date": {
+          "day": "28",
+          "monthYear": "JUL 2026"
+        },
+        "category": "LIFESTYLE",
+        "title": "How a Cozy Ambience Elevates Dining",
+        "excerpt": "A warm and welcoming ambience can turn a good meal into an unforgettable experience.",
+        "image": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop",
+        "alt": "How a Cozy Ambience Elevates Dining",
+        "link": "/blog/cozy-ambience-elevates-dining"
+      }
+    ]
+  },
+  "blogDetail": {
+    "banner": {
+      "title": "BLOG DETAIL",
+      "breadcrumb": [
+        { "label": "HOME", "href": "/" },
+        { "label": "BLOG DETAIL" }
+      ],
+      "backgroundImage": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=1600&auto=format&fit=crop"
+    },
+    "titlePart1": "The Art of Brewing the",
+    "titlePart2": "Perfect Cup of Coffee",
+    "description": "Discover the craft, techniques and little details that turn simple coffee beans into a rich and memorable cup of coffee.",
+    "meta": {
+      "date": "15 Sep 2026",
+      "author": "By Admin",
+      "readTime": "5 Min Read"
+    },
+    "mainImage": "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1400&auto=format&fit=crop",
+    "mainImageAlt": "Specialty coffee cup with foam latte art on wooden table with roasted beans",
+    "leadParagraph": "A great cup of coffee is more than just a drink — it's an experience. From the rich aroma that fills the air to the first warm sip, coffee has a unique way of bringing comfort and joy to our daily lives. At Mavelle Café & Bistro, we believe that brewing the perfect cup is both an art and a science, where quality beans, the right technique and a passion for detail come together.",
+    "sections": [
+      {
+        "heading": "Choosing the Right Beans",
+        "content": "The journey to a perfect cup starts with high-quality coffee beans. Arabica beans are known for their smooth, rich flavor, while Robusta beans offer a bolder and stronger taste. Freshly roasted beans make all the difference, as they bring out the natural oils and complex flavors that define a great cup of coffee."
+      },
+      {
+        "heading": "The Importance of Freshness",
+        "content": "Coffee tastes best when it's fresh. Grind your beans just before brewing to preserve the aroma and essential oils. Pre-ground coffee can lose its flavor quickly, so freshness is key to a rich and satisfying cup."
+      },
+      {
+        "heading": "Brewing Techniques",
+        "content": "There are many ways to brew coffee — from classic espresso machines to pour-over and French press. Each method brings out different flavors and textures. Experimenting with brewing techniques can help you find the perfect taste that suits your preference."
+      },
+      {
+        "heading": "The Little Details Matter",
+        "content": "Water temperature, grind size, and brewing time all play an important role in achieving the perfect balance of flavor. Even small adjustments can make a noticeable difference in taste, turning an ordinary cup into something truly special."
+      }
+    ],
+    "quote": {
+      "text": "Good coffee is a pleasure. Great coffee is an experience.",
+      "author": "MAVELLE CAFÉ & BISTRO"
+    }
+  }
+}
