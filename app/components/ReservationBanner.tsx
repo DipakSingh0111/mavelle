@@ -31,7 +31,7 @@ export default function ReservationBanner() {
         <div className="absolute inset-0 bg-radial from-transparent via-black/20 to-black/60 pointer-events-none z-10" />
       </div>
 
-      <div className="relative z-20 max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20 w-full">
+      <div className="relative z-20 max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20 w-full">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}

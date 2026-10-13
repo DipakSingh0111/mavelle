@@ -7,31 +7,31 @@ export default function MenuIntro() {
   const { intro } = mavelleData.menuPage;
 
   return (
-    <section className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-12 pt-14 sm:pt-20 pb-10 sm:pb-14">
+    <section className="max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12 pt-14 sm:pt-20 pb-10 sm:pb-14">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Left Column: Title & Story */}
         <div className="lg:col-span-8">
-          <div className="flex items-center gap-2.5 mb-3">
+          <div className="flex items-center gap-2.5 mb-3 animate-fade-up">
             <span className="text-xs sm:text-[13px] font-bold tracking-[0.2em] text-[#B57C3E] uppercase">
               {intro.badge}
             </span>
             <div className="w-8 h-[1.5px] bg-[#B57C3E]" />
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1c1c1c] leading-[1.15]">
+          <h2 className="animate-fade-up delay-1 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1c1c1c] leading-[1.15]">
             {intro.titlePart1}{" "}
             <span className="text-[#B57C3E] block sm:inline">
               {intro.titlePart2}
             </span>
           </h2>
 
-          <p className="text-stone-600 text-sm sm:text-[15px] leading-relaxed max-w-2xl mt-4 font-normal">
+          <p className="animate-fade-up delay-2 text-stone-600 text-sm sm:text-[15px] leading-relaxed max-w-2xl mt-4 font-normal">
             {intro.description}
           </p>
         </div>
 
         {/* Right Column: Golden Leaf Artwork & Quality Badges */}
-        <div className="lg:col-span-4 flex items-center lg:justify-end gap-5">
+        <div className="animate-fade-up delay-3 lg:col-span-4 flex items-center lg:justify-end gap-5">
           {/* Botanical Leaf Art */}
           <div
             className="w-20 h-20 sm:w-24 sm:h-24 text-[#B57C3E] opacity-30 shrink-0"

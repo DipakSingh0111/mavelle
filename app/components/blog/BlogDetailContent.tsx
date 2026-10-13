@@ -9,9 +9,9 @@ export default function BlogDetailContent() {
 
   return (
     <article className="relative w-full bg-[#FCFBF8] py-14 sm:py-18 lg:py-20">
-      <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-12">
+      <div className="max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Article Header */}
-        <header className="mb-8 sm:mb-10">
+        <header className="mb-8 sm:mb-10 animate-fade-up">
           {/* Main Title */}
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold text-[#1F2923] leading-[1.15] tracking-tight mb-4 sm:mb-5">
             <span>{blogDetail.titlePart1}</span>{" "}
@@ -52,7 +52,7 @@ export default function BlogDetailContent() {
         </header>
 
         {/* Featured Main Image */}
-        <div className="relative w-full aspect-[16/9] sm:aspect-[16/8.5] rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-[#ECE4D8] bg-stone-900 mb-10 sm:mb-12">
+        <div className="img-hover animate-fade-up delay-1 relative w-full aspect-[16/9] sm:aspect-[16/8.5] rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-[#ECE4D8] bg-stone-900 mb-10 sm:mb-12">
           <img
             src={blogDetail.mainImage}
             alt={blogDetail.mainImageAlt}
@@ -67,7 +67,7 @@ export default function BlogDetailContent() {
         </div>
 
         {/* Article Body */}
-        <div className="space-y-8 sm:space-y-9 text-[#4A403A]">
+        <div className="animate-fade-up delay-2 space-y-8 sm:space-y-9 text-[#4A403A]">
           {/* Lead Paragraph */}
           <p className="text-sm sm:text-base md:text-[16.5px] text-[#5A504B] leading-relaxed font-normal">
             {blogDetail.leadParagraph}

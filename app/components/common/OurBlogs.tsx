@@ -13,7 +13,7 @@ export default function OurBlogs() {
   return (
     <section
       id="blog"
-      className="relative w-full bg-white pt-1 sm:pt-2 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-12 overflow-hidden"
+      className="relative w-full bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12 overflow-hidden"
     >
       <div className="max-w-[1340px] mx-auto">
         {/* Section Header */}

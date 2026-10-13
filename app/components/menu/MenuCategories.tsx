@@ -7,7 +7,7 @@ export default function MenuCategories() {
   const { sections } = mavelleData.menuPage;
 
   return (
-    <section className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-12 pb-10 sm:pb-12 space-y-14 sm:space-y-16">
+    <section className="max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12 pb-10 sm:pb-12 space-y-14 sm:space-y-16">
       {sections.map((category) => (
         <div key={category.id} id={category.id} className="scroll-mt-28">
           {/* Category Header Row */}

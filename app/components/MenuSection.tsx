@@ -20,7 +20,7 @@ export default function MenuSection() {
   return (
     <section
       id="menu"
-      className="bg-[#FAF7F2] pt-12 sm:pt-14 pb-0 px-4 sm:px-6 lg:px-12 font-sans overflow-hidden"
+      className="bg-[#FAF7F2] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12 font-sans overflow-hidden"
     >
       {/* Container with max width for desktop alignment */}
       <div className="max-w-[1340px] mx-auto">

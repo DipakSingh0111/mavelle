@@ -108,7 +108,7 @@ export default function Footer() {
         </svg>
       </div>
 
-      <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-12 pt-8 sm:pt-10 pb-5 relative z-10">
+      <div className="max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12 pt-8 sm:pt-10 pb-5 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-8 items-start">
           {/* Column 1: Brand Info & Socials (3 cols) */}
           <div className="lg:col-span-3">

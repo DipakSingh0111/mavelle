@@ -27,7 +27,7 @@ export default function AboutMaville() {
   return (
     <section
       id="about"
-      className="bg-[#FAF6F0] pt-4 sm:pt-6 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-12 font-sans selection:bg-[#C68B59]/20"
+      className="bg-[#FAF6F0] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12 font-sans selection:bg-[#C68B59]/20"
     >
       <div className="max-w-[1340px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
@@ -37,7 +37,7 @@ export default function AboutMaville() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-6 relative flex justify-center lg:justify-start"
+            className="lg:col-span-6 relative flex justify-center lg:justify-end lg:pr-4"
           >
             <div className="relative w-full max-w-[540px]">
               {/* 1. Main Background Image - Cozy Café Interior */}

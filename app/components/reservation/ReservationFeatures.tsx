@@ -17,7 +17,7 @@ export default function ReservationFeatures() {
 
   return (
     <section className="w-full bg-[#FAF7F2] py-12 sm:py-14 border-y border-[#ECE4D8]">
-      <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-12">
+      <div className="max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 divide-y sm:divide-y-0 lg:divide-x divide-[#E5DACB]">
           {features.map((item, index) => {
             const IconComponent =
@@ -26,7 +26,8 @@ export default function ReservationFeatures() {
             return (
               <div
                 key={item.id}
-                className={`flex flex-col items-center text-center px-4 ${
+                style={{ animationDelay: `${index * 0.15}s` }}
+                className={`animate-fade-up flex flex-col items-center text-center px-4 ${
                   index !== 0 ? "pt-6 sm:pt-0" : ""
                 }`}
               >

@@ -90,7 +90,7 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <header className="w-full bg-white border-b border-[#f1f1f1] shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
-        <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-12 min-h-[78px] sm:h-[84px] py-1.5 flex items-center justify-between">
+        <div className="max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12 min-h-[78px] sm:h-[84px] py-1.5 flex items-center justify-between">
           {/* Logo Section */}
           <Link href="/" className="flex items-center shrink-0 py-1">
             <div className="relative flex items-center">

@@ -7,7 +7,6 @@ import OurChefs from "./components/common/OurChefs";
 import OurGallery from "./components/common/OurGallery";
 import OurTestimonials from "./components/common/OurTestimonials";
 import OurBlogs from "./components/common/OurBlogs";
-import Footer from "./components/common/Footer";
 
 export default function Home() {
   return (

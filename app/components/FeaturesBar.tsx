@@ -11,7 +11,7 @@ function FeatureIcon({ type }: { type: string }) {
         <svg
           viewBox="0 0 32 32"
           fill="none"
-          className="w-7 h-7 text-[#b37937]"
+          className="w-8 h-8 xl:w-9 xl:h-9 text-[#b37937]"
           stroke="currentColor"
           strokeWidth="1.8"
           strokeLinecap="round"
@@ -28,7 +28,7 @@ function FeatureIcon({ type }: { type: string }) {
         <svg
           viewBox="0 0 32 32"
           fill="none"
-          className="w-7 h-7 text-[#b37937]"
+          className="w-8 h-8 xl:w-9 xl:h-9 text-[#b37937]"
           stroke="currentColor"
           strokeWidth="1.8"
           strokeLinecap="round"
@@ -47,7 +47,7 @@ function FeatureIcon({ type }: { type: string }) {
         <svg
           viewBox="0 0 32 32"
           fill="none"
-          className="w-7 h-7 text-[#b37937]"
+          className="w-8 h-8 xl:w-9 xl:h-9 text-[#b37937]"
           stroke="currentColor"
           strokeWidth="1.8"
           strokeLinecap="round"
@@ -63,7 +63,7 @@ function FeatureIcon({ type }: { type: string }) {
         <svg
           viewBox="0 0 32 32"
           fill="none"
-          className="w-7 h-7 text-[#b37937]"
+          className="w-8 h-8 xl:w-9 xl:h-9 text-[#b37937]"
           stroke="currentColor"
           strokeWidth="1.8"
           strokeLinecap="round"
@@ -87,7 +87,7 @@ export default function FeaturesBar() {
 
   return (
     <section className="w-full bg-white border-b border-stone-100">
-      <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-12 pt-6 pb-12 sm:pb-14">
+      <div className="max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12 py-10 sm:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 items-center">
           {features.map((item, index) => (
             <motion.div

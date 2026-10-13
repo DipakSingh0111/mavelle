@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+import { motion } from "framer-motion";
 import mavelleData from "@/data/mavelle.json";
+import Reveal from "./Reveal";
 
 interface GalleryImage {
   id: number;
@@ -70,11 +72,11 @@ export default function OurGallery() {
   return (
     <section
       id="gallery"
-      className="relative w-full bg-white pt-4 sm:pt-6 pb-4 sm:pb-6 px-4 sm:px-6 lg:px-12 overflow-hidden"
+      className="relative w-full bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12 overflow-hidden"
     >
       <div className="max-w-[1340px] mx-auto">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
+        <Reveal className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
           {/* Subheading with trailing line */}
           <div className="inline-flex items-center space-x-3 mb-3">
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#8C6D48]">
@@ -93,12 +95,16 @@ export default function OurGallery() {
           <p className="text-[#685D57] text-sm sm:text-base leading-relaxed font-normal max-w-2xl mx-auto">
             {description}
           </p>
-        </div>
+        </Reveal>
 
         {/* Gallery Grid: 1 Tall Vertical Image on the Left + 2 Rows of 4 Images on the Right */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 items-stretch">
           {/* 1. Left Featured Tall Image (Spans 2 rows on lg) */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92, y: 30 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             onClick={() => handleOpen(0)}
             className="sm:col-span-2 md:col-span-1 lg:col-span-1 lg:row-span-2 relative group overflow-hidden rounded-2xl border border-[#ECE4D8] shadow-[0_4px_20px_rgba(0,0,0,0.03)] min-h-[300px] sm:min-h-[380px] lg:min-h-full cursor-pointer"
           >
@@ -119,14 +125,18 @@ export default function OurGallery() {
                 <ZoomIn className="w-5 h-5 text-[#8C6D48]" />
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* 2. Top Row Images (4 Items) */}
           {topRow.map((item, idx) => {
             const overallIndex = 1 + idx;
             return (
-              <div
+              <motion.div
                 key={item.id}
+                initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.6, delay: idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 onClick={() => handleOpen(overallIndex)}
                 className="relative group overflow-hidden rounded-2xl border border-[#ECE4D8] shadow-[0_4px_20px_rgba(0,0,0,0.03)] aspect-[4/3] sm:aspect-[4/3] h-full cursor-pointer"
               >
@@ -147,7 +157,7 @@ export default function OurGallery() {
                     <ZoomIn className="w-5 h-5 text-[#8C6D48]" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
 
@@ -155,8 +165,12 @@ export default function OurGallery() {
           {bottomRow.map((item, idx) => {
             const overallIndex = 1 + topRow.length + idx;
             return (
-              <div
+              <motion.div
                 key={item.id}
+                initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.6, delay: idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 onClick={() => handleOpen(overallIndex)}
                 className="relative group overflow-hidden rounded-2xl border border-[#ECE4D8] shadow-[0_4px_20px_rgba(0,0,0,0.03)] aspect-[4/3] sm:aspect-[4/3] h-full cursor-pointer"
               >
@@ -177,7 +191,7 @@ export default function OurGallery() {
                     <ZoomIn className="w-5 h-5 text-[#8C6D48]" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

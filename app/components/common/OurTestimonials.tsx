@@ -2,7 +2,9 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { motion } from "framer-motion";
 import mavelleData from "@/data/mavelle.json";
+import Reveal from "./Reveal";
 
 export default function OurTestimonials() {
   const { testimonialsSection } = mavelleData;
@@ -61,11 +63,11 @@ export default function OurTestimonials() {
   return (
     <section
       id="testimonials"
-      className="relative w-full bg-[#FAF7F2] pt-4 sm:pt-6 pb-1 sm:pb-2 px-4 sm:px-6 lg:px-12 overflow-hidden"
+      className="relative w-full bg-[#FAF7F2] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12 overflow-hidden"
     >
       <div className="max-w-[1340px] mx-auto">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+        <Reveal className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
           {/* Subheading with trailing line */}
           <div className="inline-flex items-center space-x-3 mb-3">
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#8C6D48]">
@@ -84,7 +86,7 @@ export default function OurTestimonials() {
           <p className="text-[#685D57] text-sm sm:text-base leading-relaxed font-normal max-w-2xl mx-auto">
             {description}
           </p>
-        </div>
+        </Reveal>
 
         {/* Testimonials Carousel Container with Smooth Scrolling */}
         <div
@@ -93,8 +95,13 @@ export default function OurTestimonials() {
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {testimonials.map((item, idx) => (
-            <div
+            <motion.div
               key={item.id}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.6, delay: idx * 0.12, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -6 }}
               className="w-full sm:w-[380px] lg:w-[calc(33.333%-16px)] shrink-0 snap-start bg-white rounded-3xl p-7 sm:p-8 border border-[#ECE4D8] shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col justify-between"
             >
               <div>
@@ -153,12 +160,12 @@ export default function OurTestimonials() {
                   {item.review}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Carousel Navigation Controls (Arrows + Dots) */}
-        <div className="mt-10 sm:mt-12 flex items-center justify-center gap-5 sm:gap-6">
+        <Reveal delay={0.2} className="mt-10 sm:mt-12 flex items-center justify-center gap-5 sm:gap-6">
           {/* Previous Arrow Button */}
           <button
             type="button"
@@ -195,7 +202,7 @@ export default function OurTestimonials() {
           >
             <ChevronRight className="w-5 h-5" />
           </button>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

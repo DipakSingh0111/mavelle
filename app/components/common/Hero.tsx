@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import mavelleData from "@/data/mavelle.json";
+import Reveal from "./Reveal";
 
 export default function Hero() {
   const { hero } = mavelleData;
@@ -21,8 +22,9 @@ export default function Hero() {
         />
 
         <div className="absolute inset-x-0 top-0 bottom-[20%] flex items-center">
-          <div className="w-full max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="w-full max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12">
             <div className="max-w-[700px]">
+              <Reveal direction="down" distance={20} delay={0.1}>
               <p className="flex flex-wrap items-center gap-x-3 sm:gap-x-4 gap-y-1 text-white text-[10px] sm:text-[11px] xl:text-[13px] font-medium tracking-[0.28em] uppercase">
                 {taglineParts.map((part, i) => (
                   <React.Fragment key={part}>
@@ -36,7 +38,9 @@ export default function Hero() {
                   </React.Fragment>
                 ))}
               </p>
+              </Reveal>
 
+              <Reveal delay={0.25} duration={0.9} distance={44}>
               <h1 className="mt-4 sm:mt-5 font-serif font-semibold tracking-[-0.01em] leading-[1.08] text-[34px] sm:text-[46px] lg:text-[52px] xl:text-[60px] 2xl:text-[66px]">
                 <span className="flex items-center gap-2.5 sm:gap-3 text-white whitespace-nowrap">
                   {hero.titleLine1}
@@ -68,11 +72,15 @@ export default function Hero() {
                   {hero.titleLine2}
                 </span>
               </h1>
+              </Reveal>
 
+              <Reveal delay={0.45}>
               <p className="mt-4 sm:mt-5 max-w-[440px] xl:max-w-[520px] text-white/95 text-sm sm:text-[15px] xl:text-[18px] leading-relaxed">
                 {hero.description}
               </p>
+              </Reveal>
 
+              <Reveal delay={0.65}>
               <div className="mt-6 sm:mt-7 xl:mt-9 flex flex-wrap items-center gap-3 sm:gap-4">
                 <Link
                   href={hero.primaryCta.href}
@@ -106,6 +114,7 @@ export default function Hero() {
                   {hero.secondaryCta.text}
                 </Link>
               </div>
+              </Reveal>
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ export default function OurChefs() {
   return (
     <section
       id="chefs"
-      className="relative w-full bg-[#FAF7F2] pt-4 sm:pt-6 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-12 overflow-hidden"
+      className="relative w-full bg-[#FAF7F2] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12 overflow-hidden"
     >
       {/* Decorative Faint Botanical Leaf Watermark on Top Right */}
       <div

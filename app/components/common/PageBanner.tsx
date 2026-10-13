@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export interface BreadcrumbItem {
   label: string;
@@ -28,7 +29,7 @@ export default function PageBanner({
   ];
 
   return (
-    <section className="relative w-full h-[230px] sm:h-[270px] lg:h-[310px] flex items-center justify-center overflow-hidden bg-[#0A0D0B]">
+    <section className="relative w-full h-[280px] sm:h-[340px] lg:h-[390px] flex items-center justify-center overflow-hidden bg-[#0A0D0B]">
       {/* Background Image with Dark Ambient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -46,7 +47,12 @@ export default function PageBanner({
       </div>
 
       {/* Banner Content: Title and Breadcrumb */}
-      <div className="relative z-10 text-center px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative z-10 text-center px-4"
+      >
         <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-[0.2em] uppercase drop-shadow-md">
           {title}
         </h1>
@@ -91,7 +97,7 @@ export default function PageBanner({
             })}
           </nav>
         )}
-      </div>
+      </motion.div>
     </section>
   );
 }
