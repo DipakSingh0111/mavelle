@@ -1,11 +1,17 @@
 "use client";
 
 import React from "react";
-import mavelleData from "@/data/mavelle.json";
+import { AboutSectionProps } from "@/types/mavelle.types";
 
-export default function AboutStory() {
-  const { story } = mavelleData.aboutPage;
-  const { subheading, titlePart1, titlePart2, paragraphs, images } = story;
+export default function AboutStory({ data }: AboutSectionProps) {
+  const about = data;
+  if (!about) return null;
+
+  const subheading = about.badge;
+  const titlePart1 = about.heading?.main;
+  const titlePart2 = about.heading?.highlight;
+  const paragraphs = about.page?.paragraphs || [];
+  const images = about.images;
 
   return (
     <section className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-12 font-sans overflow-hidden">

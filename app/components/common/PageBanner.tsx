@@ -4,24 +4,17 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export interface BreadcrumbItem {
-  label: string;
-  href?: string;
-}
+import { PageBannerSectionProps, BreadcrumbItem } from "@/types/mavelle.types";
 
-export interface PageBannerProps {
-  title: string;
-  breadcrumb?: BreadcrumbItem[];
-  breadcrumbText?: string;
-  backgroundImage?: string;
-}
+export type { BreadcrumbItem };
+export type PageBannerProps = PageBannerSectionProps;
 
 export default function PageBanner({
   title,
   breadcrumb,
   breadcrumbText,
   backgroundImage = "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=1600&auto=format&fit=crop",
-}: PageBannerProps) {
+}: PageBannerSectionProps) {
   // Default breadcrumbs if not provided
   const items: BreadcrumbItem[] = breadcrumb || [
     { label: "HOME", href: "/" },

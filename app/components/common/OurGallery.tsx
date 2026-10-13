@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 import { motion } from "framer-motion";
-import mavelleData from "@/data/mavelle.json";
+import { GallerySectionProps } from "@/types/mavelle.types";
 import Reveal from "./Reveal";
 
 interface GalleryImage {
@@ -13,17 +13,16 @@ interface GalleryImage {
   alt: string;
 }
 
-export default function OurGallery() {
-  const { gallerySection } = mavelleData;
-  const {
-    subheading,
-    titlePart1,
-    titlePart2,
-    description,
-    featured,
-    topRow,
-    bottomRow,
-  } = gallerySection;
+export default function OurGallery({ data }: GallerySectionProps) {
+  if (!data) return null;
+
+  const subheading = data.badge;
+  const titlePart1 = data.heading?.main;
+  const titlePart2 = data.heading?.highlight;
+  const description = data.description;
+  const featured = data.featured;
+  const topRow = data.topRow || [];
+  const bottomRow = data.bottomRow || [];
 
   // Flatten all images into a single list for easy modal navigation
   const allImages: GalleryImage[] = [featured, ...topRow, ...bottomRow];
@@ -246,22 +245,12 @@ export default function OurGallery() {
             className="relative max-w-5xl max-h-[85vh] flex flex-col items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl border border-white/10 max-h-[75vh]">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl border border-white/10 max-h-[85vh]">
               <img
                 src={allImages[activeIndex].image}
                 alt={allImages[activeIndex].alt}
-                className="w-auto h-auto max-h-[75vh] max-w-[90vw] object-contain select-none"
+                className="w-auto h-auto max-h-[85vh] max-w-[90vw] object-contain select-none"
               />
-            </div>
-
-            {/* Bottom Caption and Counter */}
-            <div className="mt-4 flex items-center justify-between w-full px-2 text-white/90">
-              <span className="font-serif text-base sm:text-lg font-medium text-[#FAF7F2]">
-                {allImages[activeIndex].title}
-              </span>
-              <span className="text-xs sm:text-sm text-[#D39A5B] font-mono tracking-wider">
-                {activeIndex + 1} / {allImages.length}
-              </span>
             </div>
           </div>
         </div>

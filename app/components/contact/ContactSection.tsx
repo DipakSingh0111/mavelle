@@ -9,11 +9,14 @@ import {
   ChevronDown,
   CheckCircle2,
 } from "lucide-react";
-import mavelleData from "@/data/mavelle.json";
+import { ContactSectionProps } from "@/types/mavelle.types";
 
-export default function ContactSection() {
-  const { contactPage } = mavelleData;
-  const { info, form } = contactPage;
+export default function ContactSection({ data }: ContactSectionProps) {
+  const contactData = data;
+  if (!contactData) return null;
+
+  const info = contactData.info;
+  const form = contactData.form;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -43,8 +46,8 @@ export default function ContactSection() {
               {/* Heading with trailing golden line */}
               <div className="flex items-center space-x-3 mb-3">
                 <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1F2923] tracking-tight">
-                  <span>{info.titlePart1}</span>
-                  <span className="text-[#B57C3E]">{info.titlePart2}</span>
+                  <span>{info.heading?.main}</span>
+                  <span className="text-[#B57C3E]">{info.heading?.highlight}</span>
                 </h2>
                 <div className="w-12 h-[1.5px] bg-[#B57C3E] shrink-0"></div>
               </div>
@@ -66,8 +69,8 @@ export default function ContactSection() {
                       Our Location
                     </h3>
                     <div className="text-sm sm:text-[15px] lg:text-base text-[#685D57] leading-relaxed mt-1.5">
-                      <p>123 Greenwood Avenue,</p>
-                      <p>Rajendra Place, New Delhi – 110008</p>
+                      <p>123 Main Street, Suite 100,</p>
+                      <p>New York, NY 10001, USA</p>
                     </div>
                   </div>
                 </div>
@@ -84,18 +87,10 @@ export default function ContactSection() {
                     <div className="text-sm sm:text-[15px] lg:text-base text-[#685D57] leading-relaxed mt-1.5">
                       <p>
                         <a
-                          href="tel:+919876543210"
+                          href="tel:+10000000000"
                           className="hover:text-[#B57C3E] transition-colors"
                         >
-                          +91 98765 43210
-                        </a>
-                      </p>
-                      <p>
-                        <a
-                          href="tel:+911145678910"
-                          className="hover:text-[#B57C3E] transition-colors"
-                        >
-                          +91 11 4567 8910
+                          +1 00000 00000
                         </a>
                       </p>
                     </div>
@@ -114,18 +109,10 @@ export default function ContactSection() {
                     <div className="text-sm sm:text-[15px] lg:text-base text-[#685D57] leading-relaxed mt-1.5">
                       <p>
                         <a
-                          href="mailto:hello@mavellecafe.com"
+                          href="mailto:info@xyz.com"
                           className="hover:text-[#B57C3E] transition-colors"
                         >
-                          hello@mavellecafe.com
-                        </a>
-                      </p>
-                      <p>
-                        <a
-                          href="mailto:reservations@mavellecafe.com"
-                          className="hover:text-[#B57C3E] transition-colors"
-                        >
-                          reservations@mavellecafe.com
+                          info@xyz.com
                         </a>
                       </p>
                     </div>
@@ -140,8 +127,8 @@ export default function ContactSection() {
             {/* Form Header */}
             <div className="flex items-center space-x-3 mb-2">
               <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-serif font-bold text-[#1F2923] tracking-tight">
-                <span>{form.titlePart1}</span>
-                <span className="text-[#B57C3E]">{form.titlePart2}</span>
+                <span>{form.heading?.main}</span>
+                <span className="text-[#B57C3E]">{form.heading?.highlight}</span>
               </h2>
               <div className="w-12 h-[1.5px] bg-[#B57C3E] shrink-0"></div>
             </div>

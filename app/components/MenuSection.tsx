@@ -4,28 +4,25 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Leaf } from "lucide-react";
-import mavelleData from "@/data/mavelle.json";
+import { MenuSectionProps } from "@/types/mavelle.types";
 
-export default function MenuSection() {
-  const { menuSection } = mavelleData;
-  const {
-    subheading,
-    titleLine1,
-    titleLine2,
-    description,
-    ctaText,
-    categories,
-  } = menuSection;
+export default function MenuSection({ data }: MenuSectionProps) {
+  if (!data) return null;
+
+  const subheading = data.badge;
+  const titleLine1 = data.heading?.main || "A Taste for ";
+  const titleLine2 = data.heading?.highlight || "Every Mood";
+  const description = data.description;
+  const ctaText = data.cta?.label || "VIEW FULL MENU";
+  const categories = data.list || [];
 
   return (
     <section
       id="menu"
       className="bg-[#FAF7F2] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12 font-sans overflow-hidden"
     >
-      {/* Container with max width for desktop alignment */}
       <div className="max-w-[1340px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Column: Title, Description, and CTA Button */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -33,7 +30,6 @@ export default function MenuSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-4 flex flex-col items-start pr-0 lg:pr-6"
           >
-            {/* Subheader with line */}
             <div className="flex items-center space-x-3 mb-4">
               <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#8C6D48]">
                 {subheading}
@@ -41,22 +37,18 @@ export default function MenuSection() {
               <div className="w-10 h-[1px] bg-[#8C6D48]"></div>
             </div>
 
-            {/* Main Heading with Serif Font and Leaf */}
             <h2 className="text-4xl sm:text-5xl font-serif text-[#2C221E] leading-[1.15] mb-6 relative">
               {titleLine1} <br />
               <span className="inline-flex items-center gap-2">
                 {titleLine2}
-                {/* Leaf Illustration Icon */}
                 <Leaf className="w-6 h-6 text-[#7E8F67] transform rotate-45 inline-block stroke-[1.5] animate-floatSlow" />
               </span>
             </h2>
 
-            {/* Description Paragraph */}
             <p className="text-[#685D57] text-base leading-relaxed mb-8 max-w-md">
               {description}
             </p>
 
-            {/* View Full Menu Button */}
             <Link
               href="/menu"
               className="group inline-flex items-center justify-between bg-[#1A2E22] text-[#F3EFEA] pl-7 pr-2 py-3 rounded-full hover:bg-[#112017] hover:scale-[1.02] hover:shadow-[0_8px_24px_rgba(26,46,34,0.3)] transition-all duration-300 shadow-sm cursor-pointer"
@@ -70,7 +62,6 @@ export default function MenuSection() {
             </Link>
           </motion.div>
 
-          {/* Right Column: Horizontal Cards Row with Top-Right Curves */}
           <div className="lg:col-span-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
               {categories.map((item, index) => (
@@ -86,7 +77,6 @@ export default function MenuSection() {
                     href={`/menu#${item.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
                     className="bg-white rounded-2xl p-3 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(44,34,30,0.12)] flex flex-col justify-between block group/card h-full transition-shadow duration-300"
                   >
-                    {/* Image Container with Custom Top-Right Curve */}
                     <div className="relative w-full h-64 sm:h-56 md:h-64 overflow-hidden rounded-tr-[70px] rounded-tl-xl rounded-bl-xl rounded-br-xl">
                       <img
                         src={item.image}
@@ -101,7 +91,6 @@ export default function MenuSection() {
                       />
                     </div>
 
-                    {/* Card Bottom: Title and Arrow Button */}
                     <div className="pt-4 pb-2 px-2 flex items-end justify-between">
                       <h3 className="font-serif text-lg font-medium text-[#2C221E] group-hover/card:text-[#8C6D48] transition-colors max-w-[100px] leading-snug">
                         {item.title}

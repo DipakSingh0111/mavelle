@@ -2,11 +2,11 @@
 
 import React from "react";
 import { MapPin, Clock, Phone } from "lucide-react";
-import mavelleData from "@/data/mavelle.json";
+import { PlanVisitSectionProps } from "@/types/mavelle.types";
 
-export default function PlanVisit() {
-  const { reservationPage } = mavelleData;
-  const { planVisit } = reservationPage;
+export default function PlanVisit({ data }: PlanVisitSectionProps) {
+  const planVisit = data;
+  if (!planVisit) return null;
 
   return (
     <section className="relative w-full bg-[#FCFBF8] py-16 sm:py-20 px-4 sm:px-6 lg:px-12 overflow-hidden">
@@ -34,8 +34,8 @@ export default function PlanVisit() {
             {/* Heading */}
             <div className="flex items-center space-x-3 mb-3">
               <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1F2923] tracking-tight">
-                <span>{planVisit.titlePart1}</span>
-                <span className="text-[#B57C3E]">{planVisit.titlePart2}</span>
+                <span>{planVisit.heading?.main}</span>
+                <span className="text-[#B57C3E]">{planVisit.heading?.highlight}</span>
               </h2>
               <div className="w-12 h-[1.5px] bg-[#B57C3E] shrink-0"></div>
             </div>

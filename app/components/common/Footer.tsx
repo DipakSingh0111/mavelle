@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import { MapPin, Phone, Mail, Clock, ChevronRight, Heart } from "lucide-react";
-import mavelleData from "@/data/mavelle.json";
 
 function SocialIcon({ icon }: { icon: string }) {
   switch (icon) {
@@ -46,19 +45,48 @@ function SocialIcon({ icon }: { icon: string }) {
   }
 }
 
-export default function Footer() {
-  const { footerSection } = mavelleData;
-  const {
-    logo,
-    description,
-    socials,
-    quickLinks,
-    menuLinks,
-    contact,
-    visit,
-    copyright,
-    footerNote,
-  } = footerSection;
+import { FooterSectionProps } from "@/types/mavelle.types";
+
+export default function Footer({ data, globalData }: FooterSectionProps) {
+  const footerSection = data;
+  const global = globalData;
+
+  if (!footerSection) return null;
+
+  const logo = footerSection.logo?.src || "/images/logo-white.png";
+  const description = footerSection.description;
+  const socials = (footerSection.socials || []).map((s, idx) => ({
+    id: s.id || s.name || `social-${idx}`,
+    name: s.name,
+    icon: s.icon,
+    href: s.href,
+  }));
+  const quickLinks = (footerSection.quickLinks || []).map((l, idx) => ({
+    id: `quick-${l.label}-${idx}`,
+    name: l.label,
+    href: l.href,
+  }));
+  const menuLinks = (footerSection.menuLinks || []).map((l, idx) => ({
+    id: `menu-${l.label}-${idx}`,
+    name: l.label,
+    href: l.href,
+  }));
+  const contact = {
+    address: global?.contact?.address || "123 Main Street, Suite 100, New York, NY 10001",
+    phone: global?.contact?.phone || "+1 00000 00000",
+    email: global?.contact?.email || "info@xyz.com",
+    hoursDays: global?.contact?.hoursDays || "Mon - Sun",
+    hoursTime: global?.contact?.hoursTime || "9:00 AM - 11:00 PM",
+  };
+  const visit = {
+    title: footerSection.visit?.title || "Visit Our Café",
+    image: footerSection.visit?.image?.src || "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop",
+    alt: footerSection.visit?.image?.alt || "Warm restaurant dining area with wooden tables",
+    ctaText: footerSection.visit?.cta?.label || "BOOK A TABLE",
+    ctaHref: footerSection.visit?.cta?.href || "#reservation",
+  };
+  const copyright = footerSection.copyright || "© 2026 Mavelle Café & Bistro. All Rights Reserved.";
+  const footerNote = "Designed with ❤️ for Food Lovers";
 
   return (
     <footer
@@ -109,9 +137,9 @@ export default function Footer() {
       </div>
 
       <div className="max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12 pt-8 sm:pt-10 pb-5 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-8 items-start">
-          {/* Column 1: Brand Info & Socials (3 cols) */}
-          <div className="lg:col-span-3">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-12 gap-x-6 gap-y-8 sm:gap-8 lg:gap-6 xl:gap-8 items-start">
+          {/* Column 1: Brand Info & Socials (3 cols on lg, full width on mobile) */}
+          <div className="col-span-2 md:col-span-1 lg:col-span-3">
             <Link href="/" className="inline-block mb-1">
               <img
                 src={logo}
@@ -146,8 +174,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Quick Links (2 cols) */}
-          <div className="lg:col-span-2">
+          {/* Column 2: Quick Links (col 1 of 2 on mobile) */}
+          <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center space-x-2 mb-3 sm:mb-4">
               <h3 className="font-serif font-bold text-sm sm:text-base text-white tracking-wide whitespace-nowrap">
                 Quick Links
@@ -157,9 +185,12 @@ export default function Footer() {
 
             <ul className="space-y-1.5">
               {quickLinks.map((link) => (
-                <li key={link.name}>
+                <li key={link.id}>
                   <Link
                     href={link.href}
+                    onClick={() => {
+                      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                    }}
                     className="flex items-center justify-between text-xs sm:text-[12.5px] text-[#CAD6CD] hover:text-[#D39A5B] transition-colors py-0.5 group"
                   >
                     <span>{link.name}</span>
@@ -170,8 +201,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Our Menu (2 cols) */}
-          <div className="lg:col-span-2">
+          {/* Column 3: Our Menu (col 2 of 2 on mobile) */}
+          <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center space-x-2 mb-3 sm:mb-4">
               <h3 className="font-serif font-bold text-sm sm:text-base text-white tracking-wide whitespace-nowrap">
                 Our Menu
@@ -181,9 +212,23 @@ export default function Footer() {
 
             <ul className="space-y-1.5">
               {menuLinks.map((link) => (
-                <li key={link.name}>
+                <li key={link.id}>
                   <Link
                     href={link.href}
+                    onClick={(e) => {
+                      if (link.href.includes("#")) {
+                        const hash = link.href.split("#")[1];
+                        if (window.location.pathname === "/menu") {
+                          e.preventDefault();
+                          const el = document.getElementById(hash);
+                          if (el) {
+                            el.scrollIntoView({ behavior: "smooth" });
+                          } else {
+                            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                          }
+                        }
+                      }
+                    }}
                     className="flex items-center justify-between text-xs sm:text-[12.5px] text-[#CAD6CD] hover:text-[#D39A5B] transition-colors py-0.5 group"
                   >
                     <span>{link.name}</span>
@@ -194,8 +239,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Contact Us (3 cols) */}
-          <div className="lg:col-span-3">
+          {/* Column 4: Contact Us (col 1 or full on mobile) */}
+          <div className="col-span-2 sm:col-span-1 lg:col-span-3">
             <div className="flex items-center space-x-2 mb-3 sm:mb-4">
               <h3 className="font-serif font-bold text-sm sm:text-base text-white tracking-wide whitespace-nowrap">
                 Contact Us
@@ -256,7 +301,7 @@ export default function Footer() {
           </div>
 
           {/* Column 5: Visit Our Café (2 cols) */}
-          <div className="lg:col-span-2">
+          <div className="col-span-2 sm:col-span-1 lg:col-span-2">
             <div className="flex items-center space-x-2 mb-3 sm:mb-4">
               <h3 className="font-serif font-bold text-sm sm:text-base text-white tracking-wide whitespace-nowrap">
                 {visit.title}
@@ -291,15 +336,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright Divider & Row */}
-        <div className="mt-7 pt-4 border-t border-[#163E2D] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#9BB1A3]">
+        <div className="mt-7 pt-4 border-t border-[#163E2D] flex items-center justify-center sm:justify-between text-xs text-[#9BB1A3]">
           <div>
             <p>{copyright}</p>
-          </div>
-
-          <div className="flex items-center gap-1.5">
-            <span>Designed with</span>
-            <Heart className="w-3.5 h-3.5 fill-[#B57C3E] text-[#B57C3E]" />
-            <span>for Food Lovers</span>
           </div>
         </div>
       </div>

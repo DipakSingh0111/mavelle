@@ -1,9 +1,10 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Heart, Leaf, Users, Calendar, ArrowRight } from "lucide-react";
-import mavelleData from "@/data/mavelle.json";
+import { AboutSectionProps } from "@/types/mavelle.types";
 
 const iconMap = {
   heart: Heart,
@@ -12,17 +13,16 @@ const iconMap = {
   calendar: Calendar,
 };
 
-export default function AboutMaville() {
-  const { aboutSection } = mavelleData;
-  const {
-    subheading,
-    titlePart1,
-    titlePart2,
-    description,
-    features,
-    ctaText,
-    images,
-  } = aboutSection;
+export default function AboutMaville({ data }: AboutSectionProps) {
+  if (!data) return null;
+
+  const subheading = data.badge;
+  const titlePart1 = data.heading?.main;
+  const titlePart2 = data.heading?.highlight;
+  const description = data.description;
+  const features = data.list || [];
+  const ctaText = data.cta?.label || "OUR STORY";
+  const images = data.images;
 
   return (
     <section
@@ -136,8 +136,8 @@ export default function AboutMaville() {
 
             {/* CTA Button "OUR STORY" */}
             <div>
-              <button
-                type="button"
+              <Link
+                href={data.cta?.href || "/about"}
                 className="group inline-flex items-center justify-between bg-[#0F2E23] text-[#FAF6F0] pl-6 pr-1.5 py-2 rounded-full hover:bg-[#091E17] hover:scale-[1.02] transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer"
               >
                 <span className="text-xs sm:text-[13px] font-semibold tracking-wider mr-5 uppercase">
@@ -146,7 +146,7 @@ export default function AboutMaville() {
                 <div className="w-8 h-8 rounded-full bg-[#C67D33] flex items-center justify-center text-white group-hover:translate-x-1 transition-transform duration-300">
                   <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
                 </div>
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>

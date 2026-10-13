@@ -2,11 +2,11 @@
 
 import React from "react";
 import { ArrowRight, MapPin } from "lucide-react";
-import mavelleData from "@/data/mavelle.json";
+import { ContactMapSectionProps } from "@/types/mavelle.types";
 
-export default function ContactMap() {
-  const { contactPage } = mavelleData;
-  const { map } = contactPage;
+export default function ContactMap({ data }: ContactMapSectionProps) {
+  const map = data;
+  if (!map) return null;
 
   return (
     <section className="relative w-full bg-[#FCFBF8] pb-16 sm:pb-20 px-4 sm:px-6 lg:px-12 overflow-hidden">

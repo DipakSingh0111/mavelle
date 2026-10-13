@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import mavelleData from "@/data/mavelle.json";
+import { FeaturesSectionProps } from "@/types/mavelle.types";
 
 function FeatureIcon({ type }: { type: string }) {
   switch (type) {
@@ -82,13 +82,14 @@ function FeatureIcon({ type }: { type: string }) {
   }
 }
 
-export default function FeaturesBar() {
-  const { features } = mavelleData;
+export default function FeaturesBar({ data }: FeaturesSectionProps) {
+  if (!data) return null;
+  const features = data.list || [];
 
   return (
     <section className="w-full bg-white border-b border-stone-100">
       <div className="max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12 py-10 sm:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 items-center">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-y-8 items-center">
           {features.map((item, index) => (
             <motion.div
               key={item.id}
@@ -97,20 +98,20 @@ export default function FeaturesBar() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className={`group flex items-center gap-4 xl:gap-5 cursor-pointer ${
+              className={`group flex flex-col sm:flex-row items-center sm:items-center text-center sm:text-left gap-3 sm:gap-4 xl:gap-5 cursor-pointer ${
                 index === 0
                   ? "lg:pr-6 xl:pr-8"
                   : "lg:border-l lg:border-stone-200 lg:px-6 xl:px-8"
               }`}
             >
-              <div className="w-14 h-14 sm:w-16 sm:h-16 xl:w-[72px] xl:h-[72px] rounded-full bg-[#f8f3eb] group-hover:bg-[#f2e7d7] group-hover:shadow-[0_4px_16px_rgba(179,121,55,0.2)] flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 xl:w-[72px] xl:h-[72px] rounded-full bg-[#f8f3eb] group-hover:bg-[#f2e7d7] group-hover:shadow-[0_4px_16px_rgba(179,121,55,0.2)] flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110">
                 <div className="transition-transform duration-300 group-hover:rotate-6">
                   <FeatureIcon type={item.icon} />
                 </div>
               </div>
 
               <div className="flex flex-col">
-                <h3 className="font-serif font-medium text-[#1c1c1c] group-hover:text-[#b37937] transition-colors duration-200 text-[17px] xl:text-[21px] leading-snug">
+                <h3 className="font-serif font-medium text-[#1c1c1c] group-hover:text-[#b37937] transition-colors duration-200 text-[15px] sm:text-[17px] xl:text-[21px] leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-stone-600 text-[13px] xl:text-[15px] leading-normal mt-1">

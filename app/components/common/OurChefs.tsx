@@ -2,12 +2,16 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import mavelleData from "@/data/mavelle.json";
+import { ChefsSectionProps } from "@/types/mavelle.types";
 
-export default function OurChefs() {
-  const { chefsSection } = mavelleData;
-  const { subheading, titlePart1, titlePart2, description, chefs } =
-    chefsSection;
+export default function OurChefs({ data }: ChefsSectionProps) {
+  if (!data) return null;
+
+  const { badge, heading, description, list } = data;
+  const subheading = badge;
+  const titlePart1 = heading?.main;
+  const titlePart2 = heading?.highlight;
+  const chefs = list || [];
 
   return (
     <section

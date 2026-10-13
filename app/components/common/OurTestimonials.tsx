@@ -3,13 +3,18 @@
 import React, { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { motion } from "framer-motion";
-import mavelleData from "@/data/mavelle.json";
+import { TestimonialsSectionProps } from "@/types/mavelle.types";
 import Reveal from "./Reveal";
 
-export default function OurTestimonials() {
-  const { testimonialsSection } = mavelleData;
-  const { subheading, titlePart1, titlePart2, description, testimonials } =
-    testimonialsSection;
+export default function OurTestimonials({ data }: TestimonialsSectionProps) {
+  const testimonialsData = data;
+  if (!testimonialsData) return null;
+
+  const subheading = testimonialsData.badge;
+  const titlePart1 = testimonialsData.heading?.main;
+  const titlePart2 = testimonialsData.heading?.highlight;
+  const description = testimonialsData.description;
+  const testimonials = testimonialsData.list || [];
 
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);

@@ -1,11 +1,17 @@
 "use client";
 
 import React from "react";
-import mavelleData from "@/data/mavelle.json";
+import { ChefsSectionProps } from "@/types/mavelle.types";
 
-export default function ChefsGrid() {
-  const { chefsPage } = mavelleData;
-  const { subheading, titlePart1, titlePart2, description, chefs } = chefsPage;
+export default function ChefsGrid({ data }: ChefsSectionProps) {
+  const chefsData = data;
+  if (!chefsData) return null;
+
+  const subheading = chefsData.badge;
+  const titlePart1 = chefsData.heading?.main;
+  const titlePart2 = chefsData.heading?.highlight;
+  const description = chefsData.description;
+  const chefs = chefsData.page?.list || chefsData.list || [];
 
   return (
     <section className="relative w-full bg-[#FCFBF8] pt-10 sm:pt-12 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-12 overflow-hidden">

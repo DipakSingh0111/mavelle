@@ -13,11 +13,11 @@ import {
   ChevronDown,
   CheckCircle2,
 } from "lucide-react";
-import mavelleData from "@/data/mavelle.json";
+import { ReservationFormSectionProps } from "@/types/mavelle.types";
 
-export default function ReservationForm() {
-  const { reservationPage } = mavelleData;
-  const { booking } = reservationPage;
+export default function ReservationForm({ data }: ReservationFormSectionProps) {
+  const booking = data;
+  if (!booking) return null;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -56,8 +56,8 @@ export default function ReservationForm() {
             {/* Heading */}
             <div className="flex items-center space-x-3 mb-2">
               <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1F2923] tracking-tight">
-                <span>{booking.titlePart1}</span>
-                <span className="text-[#B57C3E]">{booking.titlePart2}</span>
+                <span>{booking.heading?.main}</span>
+                <span className="text-[#B57C3E]">{booking.heading?.highlight}</span>
               </h2>
               <div className="w-12 h-[1.5px] bg-[#B57C3E] shrink-0"></div>
             </div>

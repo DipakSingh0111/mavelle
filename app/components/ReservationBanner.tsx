@@ -1,20 +1,20 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Leaf } from "lucide-react";
-import mavelleData from "@/data/mavelle.json";
+import { ReservationBannerSectionProps } from "@/types/mavelle.types";
 
-export default function ReservationBanner() {
-  const { reservationBanner } = mavelleData;
-  const {
-    subheading,
-    titlePart1,
-    titlePart2,
-    description,
-    ctaText,
-    backgroundImage,
-  } = reservationBanner;
+export default function ReservationBanner({ data }: ReservationBannerSectionProps) {
+  if (!data) return null;
+
+  const subheading = data.badge;
+  const titlePart1 = data.heading?.main;
+  const titlePart2 = data.heading?.highlight;
+  const description = data.description;
+  const ctaText = data.cta?.label || "RESERVE A TABLE";
+  const backgroundImage = data.backgroundImage;
 
   return (
     <section
@@ -62,8 +62,8 @@ export default function ReservationBanner() {
           </p>
 
           <div>
-            <button
-              type="button"
+            <Link
+              href={data.cta?.href || "/reservation"}
               className="group inline-flex items-center justify-between bg-[#0B251C] hover:bg-[#071B14] hover:scale-[1.03] text-[#FAF7F2] border border-[#C67D33]/60 hover:border-[#D29B56] pl-7 pr-2 py-2.5 rounded-full transition-all duration-300 shadow-xl hover:shadow-[0_8px_30px_rgba(210,155,86,0.3)] cursor-pointer"
             >
               <span className="text-xs sm:text-sm font-semibold tracking-wider mr-6 uppercase text-[#EADEC9] group-hover:text-white transition-colors duration-200">
@@ -72,7 +72,7 @@ export default function ReservationBanner() {
               <div className="w-9 h-9 rounded-full bg-[#C67D33] group-hover:bg-[#D29B56] flex items-center justify-center text-white group-hover:translate-x-1.5 group-hover:scale-105 transition-all duration-300 shadow-inner">
                 <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </div>
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>

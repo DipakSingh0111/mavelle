@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
-import mavelleData from "@/data/mavelle.json";
+import { GallerySectionProps } from "@/types/mavelle.types";
 
 interface GalleryItem {
   id: number;
@@ -12,10 +12,15 @@ interface GalleryItem {
   alt: string;
 }
 
-export default function GalleryGrid() {
-  const { galleryPage } = mavelleData;
-  const { subheading, titlePart1, titlePart2, description, images } =
-    galleryPage;
+export default function GalleryGrid({ data }: GallerySectionProps) {
+  const gallery = data;
+  if (!gallery) return null;
+
+  const subheading = gallery.badge;
+  const titlePart1 = gallery.heading?.main;
+  const titlePart2 = gallery.heading?.highlight;
+  const description = gallery.description;
+  const images = gallery.page?.list || [gallery.featured, ...(gallery.topRow || []), ...(gallery.bottomRow || [])];
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -178,17 +183,8 @@ export default function GalleryGrid() {
             <img
               src={images[activeIndex].image}
               alt={images[activeIndex].alt}
-              className="max-h-[75vh] w-auto max-w-full rounded-lg shadow-2xl object-contain select-none"
+              className="max-h-[85vh] w-auto max-w-full rounded-lg shadow-2xl object-contain select-none"
             />
-            {/* Title & Counter */}
-            <div className="mt-4 text-center">
-              <p className="text-white font-serif text-lg sm:text-xl font-medium">
-                {images[activeIndex].title}
-              </p>
-              <p className="text-[#D39A5B] text-xs sm:text-sm mt-1">
-                {activeIndex + 1} / {images.length}
-              </p>
-            </div>
           </div>
         </div>
       )}

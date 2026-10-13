@@ -4,11 +4,17 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import mavelleData from "@/data/mavelle.json";
+import { BlogNewsSectionProps } from "@/types/mavelle.types";
 
-export default function BlogGrid() {
-  const { blogPage } = mavelleData;
-  const { subheading, titlePart1, titlePart2, description, blogs } = blogPage;
+export default function BlogGrid({ data }: BlogNewsSectionProps) {
+  const blogNews = data;
+  if (!blogNews) return null;
+
+  const subheading = blogNews.badge;
+  const titlePart1 = blogNews.heading?.main;
+  const titlePart2 = blogNews.heading?.highlight;
+  const description = blogNews.description;
+  const blogs = blogNews.page?.list || blogNews.list || [];
 
   return (
     <section className="relative w-full bg-[#FCFBF8] py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 overflow-hidden">

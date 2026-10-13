@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Utensils, Coffee, Users, CalendarCheck } from "lucide-react";
-import mavelleData from "@/data/mavelle.json";
+import { ReservationFeaturesSectionProps } from "@/types/mavelle.types";
 
 const iconMap = {
   utensils: Utensils,
@@ -11,9 +11,8 @@ const iconMap = {
   "calendar-check": CalendarCheck,
 };
 
-export default function ReservationFeatures() {
-  const { reservationPage } = mavelleData;
-  const { features } = reservationPage;
+export default function ReservationFeatures({ data }: ReservationFeaturesSectionProps) {
+  const features = data || [];
 
   return (
     <section className="w-full bg-[#FAF7F2] py-12 sm:py-14 border-y border-[#ECE4D8]">

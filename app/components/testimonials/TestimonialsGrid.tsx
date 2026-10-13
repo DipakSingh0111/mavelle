@@ -3,12 +3,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
-import mavelleData from "@/data/mavelle.json";
+import { TestimonialsSectionProps } from "@/types/mavelle.types";
 
-export default function TestimonialsGrid() {
-  const { testimonialsPage } = mavelleData;
-  const { subheading, titlePart1, titlePart2, description, testimonials } =
-    testimonialsPage;
+export default function TestimonialsGrid({ data }: TestimonialsSectionProps) {
+  const testimonialsData = data;
+  if (!testimonialsData) return null;
+
+  const subheading = testimonialsData.badge;
+  const titlePart1 = testimonialsData.heading?.main;
+  const titlePart2 = testimonialsData.heading?.highlight;
+  const description = testimonialsData.description;
+  const testimonials = testimonialsData.page?.list || testimonialsData.list || [];
 
   return (
     <section className="relative w-full bg-[#FCFBF8] py-16 sm:py-20 px-4 sm:px-6 lg:px-12 overflow-hidden">

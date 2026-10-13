@@ -4,17 +4,25 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import mavelleData from "@/data/mavelle.json";
+import { NavbarSectionProps } from "@/types/mavelle.types";
 
-export default function Navbar() {
+export default function Navbar({ data }: NavbarSectionProps) {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { navbar } = mavelleData;
-  const navLinks = navbar.links;
-  const cta = navbar.cta;
+  const header = data;
 
-  // Uses active logo from mavelle.json
-  const [logoSrc, setLogoSrc] = useState(navbar.logo || "/images/logo (1).png");
+  const navLinks = (header?.menu || []).map((m) => ({
+    name: m.label,
+    href: m.href,
+    active: m.active,
+  }));
+  const cta = {
+    text: header?.cta?.label || "Book a Table",
+    href: header?.cta?.href || "#reservation",
+  };
+
+  // Uses active logo from header data
+  const [logoSrc, setLogoSrc] = useState(header?.logo?.src || "/images/logo (1).png");
 
   const getLinkProps = (item: {
     name: string;
@@ -96,7 +104,7 @@ export default function Navbar() {
             <div className="relative flex items-center">
               <Image
                 src={logoSrc}
-                alt={`${navbar.brandName} ${navbar.brandSubtitle}`}
+                alt="Mavelle Café & Bistro"
                 width={280}
                 height={90}
                 priority

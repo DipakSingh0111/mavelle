@@ -1,10 +1,17 @@
 "use client";
 
 import React from "react";
-import mavelleData from "@/data/mavelle.json";
+import { MenuIntroSectionProps } from "@/types/mavelle.types";
 
-export default function MenuIntro() {
-  const { intro } = mavelleData.menuPage;
+export default function MenuIntro({ data }: MenuIntroSectionProps) {
+  const intro = data;
+  if (!intro) return null;
+
+  const badge = intro.badge;
+  const titlePart1 = intro.heading?.main;
+  const titlePart2 = intro.heading?.highlight;
+  const description = intro.description;
+  const highlights = intro.highlights || [];
 
   return (
     <section className="max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12 pt-14 sm:pt-20 pb-10 sm:pb-14">
@@ -13,20 +20,20 @@ export default function MenuIntro() {
         <div className="lg:col-span-8">
           <div className="flex items-center gap-2.5 mb-3 animate-fade-up">
             <span className="text-xs sm:text-[13px] font-bold tracking-[0.2em] text-[#B57C3E] uppercase">
-              {intro.badge}
+              {badge}
             </span>
             <div className="w-8 h-[1.5px] bg-[#B57C3E]" />
           </div>
 
           <h2 className="animate-fade-up delay-1 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1c1c1c] leading-[1.15]">
-            {intro.titlePart1}{" "}
+            {titlePart1}{" "}
             <span className="text-[#B57C3E] block sm:inline">
-              {intro.titlePart2}
+              {titlePart2}
             </span>
           </h2>
 
           <p className="animate-fade-up delay-2 text-stone-600 text-sm sm:text-[15px] leading-relaxed max-w-2xl mt-4 font-normal">
-            {intro.description}
+            {description}
           </p>
         </div>
 
@@ -66,7 +73,7 @@ export default function MenuIntro() {
 
           {/* Quality Tagline Stack */}
           <div className="space-y-1 text-left">
-            {intro.highlights.map((highlight, idx) => (
+            {highlights.map((highlight, idx) => (
               <div
                 key={idx}
                 className="text-xs sm:text-[12.5px] font-bold tracking-wider text-[#2a2a2a] uppercase font-sans"

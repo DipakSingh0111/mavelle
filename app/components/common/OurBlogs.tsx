@@ -4,11 +4,17 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import mavelleData from "@/data/mavelle.json";
+import { BlogNewsSectionProps } from "@/types/mavelle.types";
 
-export default function OurBlogs() {
-  const { blogsSection } = mavelleData;
-  const { subheading, titlePart1, titlePart2, description, blogs } = blogsSection;
+export default function OurBlogs({ data }: BlogNewsSectionProps) {
+  const blogNews = data;
+  if (!blogNews) return null;
+
+  const subheading = blogNews.badge;
+  const titlePart1 = blogNews.heading?.main;
+  const titlePart2 = blogNews.heading?.highlight;
+  const description = blogNews.description;
+  const blogs = blogNews.list || [];
 
   return (
     <section
