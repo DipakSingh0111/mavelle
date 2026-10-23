@@ -153,7 +153,7 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
               />
             </Link>
 
-            <p className="text-[#CAD6CD] text-xs sm:text-[13px] leading-relaxed max-w-xs mt-3 mb-4 font-normal">
+            <p className="text-[#CAD6CD] text-sm sm:text-[14.5px] leading-relaxed max-w-xs mt-3 mb-5 font-normal">
               {description}
             </p>
 
@@ -166,7 +166,7 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={item.name}
-                  className="w-8 h-8 rounded-full border border-[#D39A5B]/60 text-[#D39A5B] hover:bg-[#D39A5B] hover:text-[#0C2B1E] flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-sm"
+                  className="w-9 h-9 rounded-full border border-[#D39A5B]/60 text-[#D39A5B] hover:bg-[#D39A5B] hover:text-[#0C2B1E] flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-sm"
                 >
                   <SocialIcon icon={item.icon} />
                 </a>
@@ -176,14 +176,14 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
 
           {/* Column 2: Quick Links (col 1 of 2 on mobile) */}
           <div className="col-span-1 lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-3 sm:mb-4">
-              <h3 className="font-serif font-bold text-sm sm:text-base text-white tracking-wide whitespace-nowrap">
+            <div className="flex items-center space-x-2 mb-3.5 sm:mb-4">
+              <h3 className="font-serif font-bold text-base sm:text-[17px] text-white tracking-wide whitespace-nowrap">
                 Quick Links
               </h3>
               <div className="w-6 h-[1.5px] bg-[#B57C3E] shrink-0"></div>
             </div>
 
-            <ul className="space-y-1.5">
+            <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.id}>
                   <Link
@@ -191,7 +191,7 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
                     onClick={() => {
                       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
                     }}
-                    className="flex items-center justify-between text-xs sm:text-[12.5px] text-[#CAD6CD] hover:text-[#D39A5B] transition-colors py-0.5 group"
+                    className="flex items-center justify-between text-[13.5px] sm:text-[14px] text-[#CAD6CD] hover:text-[#D39A5B] transition-colors py-0.5 group"
                   >
                     <span>{link.name}</span>
                     <ChevronRight className="w-3.5 h-3.5 text-[#B57C3E] opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
@@ -203,14 +203,14 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
 
           {/* Column 3: Our Menu (col 2 of 2 on mobile) */}
           <div className="col-span-1 lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-3 sm:mb-4">
-              <h3 className="font-serif font-bold text-sm sm:text-base text-white tracking-wide whitespace-nowrap">
+            <div className="flex items-center space-x-2 mb-3.5 sm:mb-4">
+              <h3 className="font-serif font-bold text-base sm:text-[17px] text-white tracking-wide whitespace-nowrap">
                 Our Menu
               </h3>
               <div className="w-6 h-[1.5px] bg-[#B57C3E] shrink-0"></div>
             </div>
 
-            <ul className="space-y-1.5">
+            <ul className="space-y-2">
               {menuLinks.map((link) => (
                 <li key={link.id}>
                   <Link
@@ -229,7 +229,7 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
                         }
                       }
                     }}
-                    className="flex items-center justify-between text-xs sm:text-[12.5px] text-[#CAD6CD] hover:text-[#D39A5B] transition-colors py-0.5 group"
+                    className="flex items-center justify-between text-[13.5px] sm:text-[14px] text-[#CAD6CD] hover:text-[#D39A5B] transition-colors py-0.5 group"
                   >
                     <span>{link.name}</span>
                     <ChevronRight className="w-3.5 h-3.5 text-[#B57C3E] opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
@@ -241,14 +241,14 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
 
           {/* Column 4: Contact Us (col 1 or full on mobile) */}
           <div className="col-span-2 sm:col-span-1 lg:col-span-3">
-            <div className="flex items-center space-x-2 mb-3 sm:mb-4">
-              <h3 className="font-serif font-bold text-sm sm:text-base text-white tracking-wide whitespace-nowrap">
+            <div className="flex items-center space-x-2 mb-3.5 sm:mb-4">
+              <h3 className="font-serif font-bold text-base sm:text-[17px] text-white tracking-wide whitespace-nowrap">
                 Contact Us
               </h3>
               <div className="w-6 h-[1.5px] bg-[#B57C3E] shrink-0"></div>
             </div>
 
-            <ul className="space-y-2 text-xs sm:text-[12.5px]">
+            <ul className="space-y-2.5 text-[13.5px] sm:text-[14px]">
               {/* Address */}
               <li className="flex items-start gap-2.5">
                 <div className="w-7 h-7 rounded-full bg-[#B57C3E] text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5">
@@ -292,7 +292,7 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
                 </div>
                 <div className="text-[#CAD6CD] leading-tight">
                   <span className="block font-medium">{contact.hoursDays}</span>
-                  <span className="text-[11.5px] opacity-90">
+                  <span className="text-[12.5px] opacity-90">
                     {contact.hoursTime}
                   </span>
                 </div>
@@ -302,15 +302,15 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
 
           {/* Column 5: Visit Our Café (2 cols) */}
           <div className="col-span-2 sm:col-span-1 lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-3 sm:mb-4">
-              <h3 className="font-serif font-bold text-sm sm:text-base text-white tracking-wide whitespace-nowrap">
+            <div className="flex items-center space-x-2 mb-3.5 sm:mb-4">
+              <h3 className="font-serif font-bold text-base sm:text-[17px] text-white tracking-wide whitespace-nowrap">
                 {visit.title}
               </h3>
               <div className="w-6 h-[1.5px] bg-[#B57C3E] shrink-0"></div>
             </div>
 
             {/* Café Picture */}
-            <div className="relative w-full h-24 sm:h-26 rounded-lg overflow-hidden border border-white/10 shadow-md mb-2 bg-stone-900 group">
+            <div className="relative w-full h-24 sm:h-26 rounded-lg overflow-hidden border border-white/10 shadow-md mb-2.5 bg-stone-900 group">
               <img
                 src={visit.image}
                 alt={visit.alt}
@@ -327,7 +327,7 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
             {/* Book a Table Button */}
             <Link
               href={visit.ctaHref}
-              className="w-full py-1.5 px-3 rounded-md bg-[#B57C3E] hover:bg-[#C68B59] text-white font-bold text-[11px] sm:text-xs tracking-wider uppercase flex items-center justify-center gap-1 shadow-md transition-all duration-300 hover:shadow-lg"
+              className="w-full py-2 px-3 rounded-md bg-[#B57C3E] hover:bg-[#C68B59] text-white font-bold text-[12px] sm:text-[12.5px] tracking-wider uppercase flex items-center justify-center gap-1.5 shadow-md transition-all duration-300 hover:shadow-lg"
             >
               <span>{visit.ctaText}</span>
               <ChevronRight className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -336,7 +336,7 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
         </div>
 
         {/* Bottom Copyright Divider & Row */}
-        <div className="mt-7 pt-4 border-t border-[#163E2D] flex items-center justify-center sm:justify-between text-xs text-[#9BB1A3]">
+        <div className="mt-8 pt-5 border-t border-[#163E2D] flex items-center justify-center sm:justify-between text-[13px] sm:text-[13.5px] text-[#CAD6CD]">
           <div>
             <p>{copyright}</p>
           </div>

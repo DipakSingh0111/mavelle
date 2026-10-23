@@ -44,9 +44,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${caveat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white text-[#1c1c1c]">
+      <body suppressHydrationWarning className="min-h-full flex flex-col bg-white text-[#1c1c1c]">
         <Suspense fallback={null}>
           <ScrollToTop />
         </Suspense>

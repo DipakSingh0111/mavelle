@@ -68,13 +68,13 @@ export default function OurTestimonials({ data }: TestimonialsSectionProps) {
   return (
     <section
       id="testimonials"
-      className="relative w-full bg-[#FAF7F2] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12 overflow-hidden"
+      className="relative w-full bg-[#FAF7F2] pt-8 sm:pt-10 lg:pt-12 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12 overflow-hidden"
     >
       <div className="max-w-[1340px] mx-auto">
         {/* Section Header */}
-        <Reveal className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+        <Reveal className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           {/* Subheading with trailing line */}
-          <div className="inline-flex items-center space-x-3 mb-3">
+          <div className="inline-flex items-center space-x-3 mb-2.5">
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#8C6D48]">
               {subheading}
             </span>
