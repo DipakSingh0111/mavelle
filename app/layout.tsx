@@ -2,8 +2,8 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display, Caveat } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/common/Navbar";
-import Footer from "./components/common/Footer";
+import Navbar from "@/components/common/Navbar";
+import Footer from "@/components/common/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 import { sectionsData } from "@/types/mavelle.types";
 
-import ScrollToTop from "./components/common/ScrollToTop";
+import ScrollToTop from "@/components/common/ScrollToTop";
 
 export default function RootLayout({
   children,

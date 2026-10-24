@@ -1,12 +1,12 @@
-import AboutMaville from "./components/common/AboutMaville";
-import Hero from "./components/common/Hero";
-import FeaturesBar from "./components/FeaturesBar";
-import MenuSection from "./components/MenuSection";
-import ReservationBanner from "./components/ReservationBanner";
-import OurChefs from "./components/common/OurChefs";
-import OurGallery from "./components/common/OurGallery";
-import OurTestimonials from "./components/common/OurTestimonials";
-import OurBlogs from "./components/common/OurBlogs";
+import AboutMaville from "@/components/common/AboutMaville";
+import Hero from "@/components/common/Hero";
+import FeaturesBar from "@/components/FeaturesBar";
+import MenuSection from "@/components/MenuSection";
+import ReservationBanner from "@/components/ReservationBanner";
+import OurChefs from "@/components/common/OurChefs";
+import OurGallery from "@/components/common/OurGallery";
+import OurTestimonials from "@/components/common/OurTestimonials";
+import OurBlogs from "@/components/common/OurBlogs";
 import { sectionsData } from "@/types/mavelle.types";
 
 export default function Home() {

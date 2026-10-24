@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import PageBanner from "../components/common/PageBanner";
-import BlogGrid from "../components/blog/BlogGrid";
+import PageBanner from "@/components/common/PageBanner";
+import BlogGrid from "@/components/blog/BlogGrid";
 
 import { sectionsData } from "@/types/mavelle.types";
 

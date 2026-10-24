@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import PageBanner from "../components/common/PageBanner";
-import AboutStory from "../components/about/AboutStory";
-import MenuSection from "../components/MenuSection";
-import ReservationBanner from "../components/ReservationBanner";
+import PageBanner from "@/components/common/PageBanner";
+import AboutStory from "@/components/about/AboutStory";
+import MenuSection from "@/components/MenuSection";
+import ReservationBanner from "@/components/ReservationBanner";
 
 import { sectionsData } from "@/types/mavelle.types";
 

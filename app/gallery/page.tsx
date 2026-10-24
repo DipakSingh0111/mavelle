@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import PageBanner from "../components/common/PageBanner";
-import GalleryGrid from "../components/gallery/GalleryGrid";
-import ReservationBanner from "../components/ReservationBanner";
+import PageBanner from "@/components/common/PageBanner";
+import GalleryGrid from "@/components/gallery/GalleryGrid";
+import ReservationBanner from "@/components/ReservationBanner";
 
 import { sectionsData } from "@/types/mavelle.types";
 

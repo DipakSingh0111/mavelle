@@ -1,6 +1,6 @@
 import React from "react";
-import PageBanner from "../../components/common/PageBanner";
-import BlogDetailContent from "../../components/blog/BlogDetailContent";
+import PageBanner from "@/components/common/PageBanner";
+import BlogDetailContent from "@/components/blog/BlogDetailContent";
 import { sectionsData } from "@/types/mavelle.types";
 
 export function generateStaticParams() {

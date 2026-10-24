@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import PageBanner from "../components/common/PageBanner";
-import ContactSection from "../components/contact/ContactSection";
-import ContactMap from "../components/contact/ContactMap";
+import PageBanner from "@/components/common/PageBanner";
+import ContactSection from "@/components/contact/ContactSection";
+import ContactMap from "@/components/contact/ContactMap";
 
 import { sectionsData } from "@/types/mavelle.types";
 

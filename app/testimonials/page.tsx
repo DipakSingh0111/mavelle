@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import PageBanner from "../components/common/PageBanner";
-import TestimonialsGrid from "../components/testimonials/TestimonialsGrid";
+import PageBanner from "@/components/common/PageBanner";
+import TestimonialsGrid from "@/components/testimonials/TestimonialsGrid";
 
 import { sectionsData } from "@/types/mavelle.types";
 
