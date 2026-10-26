@@ -123,7 +123,7 @@ export default function Navbar({ data }: NavbarSectionProps) {
                 <Link
                   key={item.name}
                   href={href}
-                  className={`relative py-1 text-[14.5px] font-medium transition-colors duration-200 ${
+                  className={`relative py-1 text-[17.5px] font-medium transition-colors duration-200 ${
                     isActive
                       ? "text-[#c2782b] font-semibold"
                       : "text-[#222222] hover:text-[#c2782b]"

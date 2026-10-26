@@ -151,14 +151,18 @@ export default function MenuSection({ data }: MenuSectionProps) {
                     className="h-full"
                   >
                     <Link
-                      href={`/menu#${item.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
+                      href={`/menu#${item.title
+                        .toLowerCase()
+                        .replace(/['']/g, "")
+                        .replace(/ & /g, "-")
+                        .replace(/\s+/g, "-")}`}
                       className="bg-white rounded-2xl p-3 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(44,34,30,0.12)] flex flex-col justify-between block group/card h-full transition-shadow duration-300"
                     >
-                      <div className="relative w-full h-64 sm:h-56 md:h-64 overflow-hidden rounded-tr-[70px] rounded-tl-xl rounded-bl-xl rounded-br-xl">
+                      <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] overflow-hidden rounded-tr-[70px] rounded-tl-xl rounded-bl-xl rounded-br-xl">
                         <img
                           src={item.image}
                           alt={item.alt}
-                          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover/card:scale-110"
+                          className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover/card:scale-110"
                           onError={(e) => {
                             const target = e.currentTarget;
                             target.onerror = null;
@@ -168,8 +172,8 @@ export default function MenuSection({ data }: MenuSectionProps) {
                         />
                       </div>
 
-                      <div className="pt-4 pb-2 px-2 flex items-end justify-between">
-                        <h3 className="font-serif text-lg font-medium text-[#2C221E] group-hover/card:text-[#8C6D48] transition-colors max-w-[130px] leading-snug">
+                      <div className="pt-4 pb-2 px-2 flex items-end justify-between gap-3">
+                        <h3 className="font-serif text-lg font-medium text-[#2C221E] group-hover/card:text-[#8C6D48] transition-colors leading-snug min-w-0 flex-1">
                           {item.title}
                         </h3>
 

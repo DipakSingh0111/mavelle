@@ -572,6 +572,119 @@
                         "image": "/images/mavelle_16.jpg"
                       }
                     ]
+                  },
+                  {
+                    "id": "specials",
+                    "heading": {
+                      "main": "Specials"
+                    },
+                    "subtitle": "LIMITED TIME FAVOURITES",
+                    "list": [
+                      {
+                        "id": "truffle-pasta",
+                        "name": "Truffle Pasta",
+                        "price": "₹420",
+                        "description": "Creamy pasta tossed with aromatic truffle oil and parmesan.",
+                        "image": "/images/mavelle_06.jpg"
+                      },
+                      {
+                        "id": "smoky-bbq-platter",
+                        "name": "Smoky BBQ Platter",
+                        "price": "₹480",
+                        "description": "Grilled meats with house BBQ sauce and sides.",
+                        "image": "/images/mavelle_05.jpg"
+                      },
+                      {
+                        "id": "cafe-signature-bowl",
+                        "name": "Café Signature Bowl",
+                        "price": "₹360",
+                        "description": "A hearty chef special bowl with fresh greens and grains.",
+                        "image": "/images/mavelle_15.jpg"
+                      },
+                      {
+                        "id": "weekend-brunch-special",
+                        "name": "Weekend Brunch Special",
+                        "price": "₹390",
+                        "description": "A curated brunch plate available only on weekends.",
+                        "image": "/images/mavelle_16.jpg"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "seasonal-menu",
+                    "heading": {
+                      "main": "Seasonal",
+                      "highlight": "Menu"
+                    },
+                    "subtitle": "FRESH FROM THE SEASON",
+                    "list": [
+                      {
+                        "id": "grilled-salmon-plate",
+                        "name": "Grilled Salmon Plate",
+                        "price": "₹520",
+                        "description": "Seasonal salmon with asparagus, potatoes and herb oil.",
+                        "image": "/images/mavelle_07.jpg"
+                      },
+                      {
+                        "id": "harvest-salad",
+                        "name": "Harvest Salad",
+                        "price": "₹280",
+                        "description": "Seasonal greens, roasted veggies and light citrus dressing.",
+                        "image": "/images/mavelle_14.jpg"
+                      },
+                      {
+                        "id": "pumpkin-soup",
+                        "name": "Pumpkin Soup",
+                        "price": "₹220",
+                        "description": "Creamy seasonal pumpkin soup with toasted seeds.",
+                        "image": "/images/mavelle_06.jpg"
+                      },
+                      {
+                        "id": "berry-parfait",
+                        "name": "Berry Parfait",
+                        "price": "₹200",
+                        "description": "Layered yogurt with seasonal berries and granola.",
+                        "image": "/images/mavelle_17.jpg"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "chefs-recommendation",
+                    "heading": {
+                      "main": "Chef's",
+                      "highlight": "Recommendation"
+                    },
+                    "subtitle": "HANDPICKED BY OUR CHEFS",
+                    "list": [
+                      {
+                        "id": "chefs-platter",
+                        "name": "Chef's Platter",
+                        "price": "₹560",
+                        "description": "A curated selection of our chef's favourite dishes.",
+                        "image": "/images/mavelle_08.jpg"
+                      },
+                      {
+                        "id": "herb-crusted-chicken",
+                        "name": "Herb Crusted Chicken",
+                        "price": "₹380",
+                        "description": "Juicy chicken with garden herbs and roasted sides.",
+                        "image": "/images/mavelle_05.jpg"
+                      },
+                      {
+                        "id": "mushroom-risotto",
+                        "name": "Mushroom Risotto",
+                        "price": "₹340",
+                        "description": "Creamy risotto with wild mushrooms and parmesan.",
+                        "image": "/images/mavelle_15.jpg"
+                      },
+                      {
+                        "id": "lava-cake",
+                        "name": "Molten Lava Cake",
+                        "price": "₹240",
+                        "description": "Warm chocolate cake with a gooey centre.",
+                        "image": "/images/mavelle_17.jpg"
+                      }
+                    ]
                   }
                 ]
               }
@@ -1427,15 +1540,15 @@
                 },
                 {
                   "label": "Specials",
-                  "href": "/menu#main-course"
+                  "href": "/menu#specials"
                 },
                 {
                   "label": "Seasonal Menu",
-                  "href": "/menu#breakfast"
+                  "href": "/menu#seasonal-menu"
                 },
                 {
                   "label": "Chef's Recommendation",
-                  "href": "/menu#coffee-beverages"
+                  "href": "/menu#chefs-recommendation"
                 }
               ],
               "visit": {
