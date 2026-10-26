@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Leaf } from "lucide-react";
+import { ArrowRight, Leaf, ChevronLeft, ChevronRight } from "lucide-react";
 import { MenuSectionProps } from "@/types/mavelle.types";
 
 export default function MenuSection({ data }: MenuSectionProps) {
@@ -16,6 +16,49 @@ export default function MenuSection({ data }: MenuSectionProps) {
   const ctaText = data.cta?.label || "VIEW FULL MENU";
   const categories = data.list || [];
 
+  // Carousel state
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [itemsPerView, setItemsPerView] = useState(3);
+
+  // Update visible items count based on screen width
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setItemsPerView(1);
+      } else if (window.innerWidth < 1024) {
+        setItemsPerView(2);
+      } else {
+        setItemsPerView(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const maxIndex = Math.max(0, categories.length - itemsPerView);
+
+  // Auto slide interval
+  useEffect(() => {
+    if (isPaused || categories.length <= itemsPerView) return;
+
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    }, 3200);
+
+    return () => clearInterval(timer);
+  }, [isPaused, maxIndex, itemsPerView, categories.length]);
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+  };
+
   return (
     <section
       id="menu"
@@ -23,6 +66,7 @@ export default function MenuSection({ data }: MenuSectionProps) {
     >
       <div className="max-w-[1340px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -49,59 +93,110 @@ export default function MenuSection({ data }: MenuSectionProps) {
               {description}
             </p>
 
-            <Link
-              href="/menu"
-              className="group inline-flex items-center justify-between bg-[#1A2E22] text-[#F3EFEA] pl-7 pr-2 py-3 rounded-full hover:bg-[#112017] hover:scale-[1.02] hover:shadow-[0_8px_24px_rgba(26,46,34,0.3)] transition-all duration-300 shadow-sm cursor-pointer"
-            >
-              <span className="text-sm font-medium tracking-wide mr-6">
-                {ctaText}
-              </span>
-              <div className="w-9 h-9 rounded-full bg-[#C68B59] flex items-center justify-center text-white group-hover:translate-x-1.5 group-hover:scale-105 transition-all duration-300">
-                <ArrowRight className="w-4 h-4" />
+            <div className="flex items-center gap-4 flex-wrap">
+              <Link
+                href="/menu"
+                className="group inline-flex items-center justify-between bg-[#1A2E22] text-[#F3EFEA] pl-7 pr-2 py-3 rounded-full hover:bg-[#112017] hover:scale-[1.02] hover:shadow-[0_8px_24px_rgba(26,46,34,0.3)] transition-all duration-300 shadow-sm cursor-pointer"
+              >
+                <span className="text-sm font-medium tracking-wide mr-6">
+                  {ctaText}
+                </span>
+                <div className="w-9 h-9 rounded-full bg-[#C68B59] flex items-center justify-center text-white group-hover:translate-x-1.5 group-hover:scale-105 transition-all duration-300">
+                  <ArrowRight className="w-4 h-4" />
+                </div>
+              </Link>
+
+              {/* Slider Arrows */}
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={handlePrev}
+                  aria-label="Previous slide"
+                  className="w-10 h-10 rounded-full border border-[#E6DCD0] bg-white flex items-center justify-center text-[#2C221E] hover:border-[#8C6D48] hover:bg-[#8C6D48] hover:text-white transition-all duration-300 shadow-sm cursor-pointer"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={handleNext}
+                  aria-label="Next slide"
+                  className="w-10 h-10 rounded-full border border-[#E6DCD0] bg-white flex items-center justify-center text-[#2C221E] hover:border-[#8C6D48] hover:bg-[#8C6D48] hover:text-white transition-all duration-300 shadow-sm cursor-pointer"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
               </div>
-            </Link>
+            </div>
           </motion.div>
 
-          <div className="lg:col-span-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-              {categories.map((item, index) => (
-                <motion.div
+          {/* Right Slider / Carousel */}
+          <div
+            className="lg:col-span-8 overflow-hidden relative"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            <div
+              className="flex transition-transform duration-700 ease-out"
+              style={{
+                transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
+              }}
+            >
+              {categories.map((item) => (
+                <div
                   key={item.id}
-                  initial={{ opacity: 0, y: 28 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -8, transition: { duration: 0.25 } }}
+                  style={{ flex: `0 0 ${100 / itemsPerView}%` }}
+                  className="px-2.5 box-border"
                 >
-                  <Link
-                    href={`/menu#${item.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
-                    className="bg-white rounded-2xl p-3 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(44,34,30,0.12)] flex flex-col justify-between block group/card h-full transition-shadow duration-300"
+                  <motion.div
+                    whileHover={{ y: -8, transition: { duration: 0.25 } }}
+                    className="h-full"
                   >
-                    <div className="relative w-full h-64 sm:h-56 md:h-64 overflow-hidden rounded-tr-[70px] rounded-tl-xl rounded-bl-xl rounded-br-xl">
-                      <img
-                        src={item.image}
-                        alt={item.alt}
-                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover/card:scale-110"
-                        onError={(e) => {
-                          const target = e.currentTarget;
-                          target.onerror = null;
-                          target.src =
-                            "https://placehold.co/400x500/e2e8f0/1e293b?text=Food+Item";
-                        }}
-                      />
-                    </div>
-
-                    <div className="pt-4 pb-2 px-2 flex items-end justify-between">
-                      <h3 className="font-serif text-lg font-medium text-[#2C221E] group-hover/card:text-[#8C6D48] transition-colors max-w-[100px] leading-snug">
-                        {item.title}
-                      </h3>
-
-                      <div className="w-10 h-10 rounded-full border border-[#E6DCD0] flex items-center justify-center text-[#2C221E] group-hover/card:border-[#8C6D48] group-hover/card:bg-[#8C6D48] group-hover/card:text-white transition-all duration-300">
-                        <ArrowRight className="w-4 h-4 text-[#8C6D48] group-hover/card:text-white transition-colors duration-200" />
+                    <Link
+                      href={`/menu#${item.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
+                      className="bg-white rounded-2xl p-3 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(44,34,30,0.12)] flex flex-col justify-between block group/card h-full transition-shadow duration-300"
+                    >
+                      <div className="relative w-full h-64 sm:h-56 md:h-64 overflow-hidden rounded-tr-[70px] rounded-tl-xl rounded-bl-xl rounded-br-xl">
+                        <img
+                          src={item.image}
+                          alt={item.alt}
+                          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover/card:scale-110"
+                          onError={(e) => {
+                            const target = e.currentTarget;
+                            target.onerror = null;
+                            target.src =
+                              "https://placehold.co/400x500/e2e8f0/1e293b?text=Food+Item";
+                          }}
+                        />
                       </div>
-                    </div>
-                  </Link>
-                </motion.div>
+
+                      <div className="pt-4 pb-2 px-2 flex items-end justify-between">
+                        <h3 className="font-serif text-lg font-medium text-[#2C221E] group-hover/card:text-[#8C6D48] transition-colors max-w-[130px] leading-snug">
+                          {item.title}
+                        </h3>
+
+                        <div className="w-10 h-10 rounded-full border border-[#E6DCD0] flex items-center justify-center text-[#2C221E] group-hover/card:border-[#8C6D48] group-hover/card:bg-[#8C6D48] group-hover/card:text-white transition-all duration-300">
+                          <ArrowRight className="w-4 h-4 text-[#8C6D48] group-hover/card:text-white transition-colors duration-200" />
+                        </div>
+                      </div>
+                    </Link>
+                  </motion.div>
+                </div>
+              ))}
+            </div>
+
+            {/* Slider Dots / Indicators */}
+            <div className="flex justify-center items-center gap-2 mt-6">
+              {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  aria-label={`Go to slide ${idx + 1}`}
+                  onClick={() => setCurrentIndex(idx)}
+                  className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                    currentIndex === idx
+                      ? "w-7 bg-[#8C6D48]"
+                      : "w-2 bg-[#E6DCD0] hover:bg-[#8C6D48]/50"
+                  }`}
+                />
               ))}
             </div>
           </div>

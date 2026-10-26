@@ -136,15 +136,11 @@
                 {
                   "label": "Blog",
                   "href": "#blog"
-                },
-                {
-                  "label": "Contact Us",
-                  "href": "#contact"
                 }
               ],
               "cta": {
-                "label": "Book a Table",
-                "href": "/reservation"
+                "label": "Contact",
+                "href": "/contact"
               }
             }
           }
@@ -290,8 +286,8 @@
                 "href": "/menu"
               },
               "secondaryCta": {
-                "label": "RESERVE A TABLE",
-                "href": "/reservation"
+                "label": "CONTACT US",
+                "href": "/contact"
               }
             }
           }
@@ -364,6 +360,24 @@
                   "title": "Desserts",
                   "image": "/images/mavelle_17.jpg",
                   "alt": "Chocolate Cake Dessert"
+                },
+                {
+                  "id": 5,
+                  "title": "Specials",
+                  "image": "/images/mavelle_06.jpg",
+                  "alt": "Chef Specials"
+                },
+                {
+                  "id": 6,
+                  "title": "Seasonal Menu",
+                  "image": "/images/mavelle_07.jpg",
+                  "alt": "Seasonal Menu Dishes"
+                },
+                {
+                  "id": 7,
+                  "title": "Chef's Recommendation",
+                  "image": "/images/mavelle_08.jpg",
+                  "alt": "Chef's Recommendation"
                 }
               ],
               "page": {
@@ -623,8 +637,8 @@
               },
               "description": "Book your table and experience the perfect blend of delicious food, freshly brewed coffee and a warm, cozy ambience at Mavelle Café & Bistro.",
               "cta": {
-                "label": "RESERVE A TABLE",
-                "href": "/reservation"
+                "label": "CONTACT US",
+                "href": "/contact"
               },
               "backgroundImage": "/images/Reservation.png",
               "page": {

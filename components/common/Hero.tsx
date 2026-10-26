@@ -109,10 +109,10 @@ export default function Hero({ data }: HeroSectionProps) {
                 </Link>
 
                 <Link
-                  href={data.secondaryCta?.href || "#reservation"}
+                  href={data.secondaryCta?.href || "/contact"}
                   className="inline-flex items-center justify-center rounded-full border-[1.5px] border-white/80 hover:border-white bg-black/30 hover:bg-black/50 backdrop-blur-[2px] px-7 xl:px-9 h-[47px] xl:h-[55px] text-white text-[11px] xl:text-[13px] font-semibold tracking-[0.12em] uppercase transition-colors duration-300"
                 >
-                  {data.secondaryCta?.label || "RESERVE A TABLE"}
+                  {data.secondaryCta?.label || "CONTACT US"}
                 </Link>
               </div>
               </Reveal>

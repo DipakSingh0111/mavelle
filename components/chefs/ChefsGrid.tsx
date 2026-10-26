@@ -14,7 +14,7 @@ export default function ChefsGrid({ data }: ChefsSectionProps) {
   const chefs = chefsData.page?.list || chefsData.list || [];
 
   return (
-    <section className="relative w-full bg-[#FCFBF8] pt-10 sm:pt-12 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-12 overflow-hidden">
+    <section className="relative w-full bg-[#FCFBF8] pt-8 sm:pt-10 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-12 overflow-hidden">
       
       <div
         className="absolute -top-10 -right-12 w-80 h-80 pointer-events-none opacity-20 text-[#B57C3E]"

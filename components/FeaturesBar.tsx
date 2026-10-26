@@ -98,7 +98,7 @@ export default function FeaturesBar({ data }: FeaturesSectionProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className={`group flex flex-col sm:flex-row items-center sm:items-center text-center sm:text-left gap-3 sm:gap-4 xl:gap-5 cursor-pointer ${
+              className={`group flex flex-col sm:flex-row items-center sm:items-center text-center sm:text-left gap-3 sm:gap-4 xl:gap-5 ${
                 index === 0
                   ? "lg:pr-6 xl:pr-8"
                   : "lg:border-l lg:border-stone-200 lg:px-6 xl:px-8"

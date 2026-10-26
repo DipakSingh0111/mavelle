@@ -37,7 +37,7 @@ export default function ContactSection({ data }: ContactSectionProps) {
   };
 
   return (
-    <section className="relative w-full bg-[#FCFBF8] py-16 sm:py-20 px-4 sm:px-6 lg:px-12 overflow-hidden">
+    <section className="relative w-full bg-[#FCFBF8] pt-8 sm:pt-10 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-12 overflow-hidden">
       <div className="max-w-[1340px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           

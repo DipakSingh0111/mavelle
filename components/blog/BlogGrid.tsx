@@ -18,7 +18,7 @@ export default function BlogGrid({ data }: BlogNewsSectionProps) {
   const blogs = blogNews.page?.list || blogNews.list || [];
 
   return (
-    <section className="relative w-full bg-[#FCFBF8] py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 overflow-hidden">
+    <section className="relative w-full bg-[#FCFBF8] pt-8 sm:pt-10 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-12 overflow-hidden">
       <div className="max-w-[1340px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

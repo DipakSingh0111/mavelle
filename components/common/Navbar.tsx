@@ -17,8 +17,8 @@ export default function Navbar({ data }: NavbarSectionProps) {
     active: m.active,
   }));
   const cta = {
-    text: header?.cta?.label || "Book a Table",
-    href: header?.cta?.href || "#reservation",
+    text: header?.cta?.label || "Contact",
+    href: header?.cta?.href || "/contact",
   };
 
   const [logoSrc, setLogoSrc] = useState(header?.logo?.src || "/images/logo (1).png");
@@ -88,7 +88,7 @@ export default function Navbar({ data }: NavbarSectionProps) {
     return { href, isActive };
   };
 
-  const reservationHref = "/reservation";
+  const ctaHref = cta.href || "/contact";
 
   return (
     <div className="w-full sticky top-0 z-50">
@@ -141,7 +141,7 @@ export default function Navbar({ data }: NavbarSectionProps) {
 
           <div className="hidden lg:flex items-center">
             <Link
-              href={reservationHref}
+              href={ctaHref}
               className="group inline-flex items-center bg-[#0d3929] hover:bg-[#0a2f22] border-[1.5px] border-[#c2782b] pl-5 pr-1.5 py-1.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#0d3929]/20"
             >
               <span className="text-white text-[14px] font-medium tracking-wide">
@@ -231,7 +231,7 @@ export default function Navbar({ data }: NavbarSectionProps) {
 
               <div className="pt-4 border-t border-stone-100">
                 <Link
-                  href={reservationHref}
+                  href={ctaHref}
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full inline-flex items-center justify-between bg-[#0d3929] border-[1.5px] border-[#c2782b] pl-6 pr-2 py-2 rounded-full text-white font-medium"
                 >

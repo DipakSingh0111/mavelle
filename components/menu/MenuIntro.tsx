@@ -14,7 +14,7 @@ export default function MenuIntro({ data }: MenuIntroSectionProps) {
   const highlights = intro.highlights || [];
 
   return (
-    <section className="max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12 pt-14 sm:pt-20 pb-10 sm:pb-14">
+    <section className="max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12 pt-8 sm:pt-10 pb-8 sm:pb-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
         <div className="lg:col-span-8">

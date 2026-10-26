@@ -9,7 +9,7 @@ export default function BlogDetailContent({ data }: BlogDetailSectionProps) {
   if (!detail) return null;
 
   return (
-    <article className="relative w-full bg-[#FCFBF8] py-14 sm:py-18 lg:py-20">
+    <article className="relative w-full bg-[#FCFBF8] pt-8 sm:pt-10 pb-12 sm:pb-16">
       <div className="max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12">
         
         <header className="mb-8 sm:mb-10 animate-fade-up">

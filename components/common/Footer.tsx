@@ -136,9 +136,9 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
       </div>
 
       <div className="max-w-[1436px] mx-auto px-4 sm:px-6 lg:px-12 pt-8 sm:pt-10 pb-5 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-12 gap-x-6 gap-y-8 sm:gap-8 lg:gap-6 xl:gap-8 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-6 gap-y-8 sm:gap-8 lg:gap-8 xl:gap-10 items-start">
           
-          <div className="col-span-2 md:col-span-1 lg:col-span-3">
+          <div className="sm:col-span-2 lg:col-span-4">
             <Link href="/" className="inline-block mb-1">
               <img
                 src={logo}
@@ -152,7 +152,7 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
               />
             </Link>
 
-            <p className="text-[#CAD6CD] text-sm sm:text-[14.5px] leading-relaxed max-w-xs mt-3 mb-5 font-normal">
+            <p className="text-[#CAD6CD] text-sm sm:text-[14.5px] leading-relaxed max-w-sm mt-3 mb-5 font-normal">
               {description}
             </p>
 
@@ -172,7 +172,7 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
             </div>
           </div>
 
-          <div className="col-span-1 lg:col-span-2">
+          <div className="sm:col-span-1 lg:col-span-2">
             <div className="flex items-center space-x-2 mb-3.5 sm:mb-4">
               <h3 className="font-serif font-bold text-base sm:text-[17px] text-white tracking-wide whitespace-nowrap">
                 Quick Links
@@ -198,7 +198,7 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
             </ul>
           </div>
 
-          <div className="col-span-1 lg:col-span-2">
+          <div className="sm:col-span-1 lg:col-span-3">
             <div className="flex items-center space-x-2 mb-3.5 sm:mb-4">
               <h3 className="font-serif font-bold text-base sm:text-[17px] text-white tracking-wide whitespace-nowrap">
                 Our Menu
@@ -235,7 +235,7 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
             </ul>
           </div>
 
-          <div className="col-span-2 sm:col-span-1 lg:col-span-3">
+          <div className="sm:col-span-2 lg:col-span-3">
             <div className="flex items-center space-x-2 mb-3.5 sm:mb-4">
               <h3 className="font-serif font-bold text-base sm:text-[17px] text-white tracking-wide whitespace-nowrap">
                 Contact Us
@@ -290,37 +290,6 @@ export default function Footer({ data, globalData }: FooterSectionProps) {
                 </div>
               </li>
             </ul>
-          </div>
-
-          <div className="col-span-2 sm:col-span-1 lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-3.5 sm:mb-4">
-              <h3 className="font-serif font-bold text-base sm:text-[17px] text-white tracking-wide whitespace-nowrap">
-                {visit.title}
-              </h3>
-              <div className="w-6 h-[1.5px] bg-[#B57C3E] shrink-0"></div>
-            </div>
-
-            <div className="relative w-full h-24 sm:h-26 rounded-lg overflow-hidden border border-white/10 shadow-md mb-2.5 bg-stone-900 group">
-              <img
-                src={visit.image}
-                alt={visit.alt}
-                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                onError={(e) => {
-                  const target = e.currentTarget;
-                  target.onerror = null;
-                  target.src =
-                    "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop";
-                }}
-              />
-            </div>
-
-            <Link
-              href={visit.ctaHref}
-              className="w-full py-2 px-3 rounded-md bg-[#B57C3E] hover:bg-[#C68B59] text-white font-bold text-[12px] sm:text-[12.5px] tracking-wider uppercase flex items-center justify-center gap-1.5 shadow-md transition-all duration-300 hover:shadow-lg"
-            >
-              <span>{visit.ctaText}</span>
-              <ChevronRight className="w-3.5 h-3.5 stroke-[2.5]" />
-            </Link>
           </div>
         </div>
 

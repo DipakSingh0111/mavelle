@@ -13,7 +13,7 @@ export default function ReservationBanner({ data }: ReservationBannerSectionProp
   const titlePart1 = data.heading?.main;
   const titlePart2 = data.heading?.highlight;
   const description = data.description;
-  const ctaText = data.cta?.label || "RESERVE A TABLE";
+  const ctaText = data.cta?.label || "CONTACT US";
   const backgroundImage = data.backgroundImage;
 
   return (
@@ -63,7 +63,7 @@ export default function ReservationBanner({ data }: ReservationBannerSectionProp
 
           <div>
             <Link
-              href={data.cta?.href || "/reservation"}
+              href={data.cta?.href || "/contact"}
               className="group inline-flex items-center justify-between bg-[#0B251C] hover:bg-[#071B14] hover:scale-[1.03] text-[#FAF7F2] border border-[#C67D33]/60 hover:border-[#D29B56] pl-7 pr-2 py-2.5 rounded-full transition-all duration-300 shadow-xl hover:shadow-[0_8px_30px_rgba(210,155,86,0.3)] cursor-pointer"
             >
               <span className="text-xs sm:text-sm font-semibold tracking-wider mr-6 uppercase text-[#EADEC9] group-hover:text-white transition-colors duration-200">
