@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { TestimonialsSectionProps } from "@/types/mavelle.types";
 
 export default function TestimonialsGrid({ data }: TestimonialsSectionProps) {
@@ -15,9 +15,27 @@ export default function TestimonialsGrid({ data }: TestimonialsSectionProps) {
   const description = testimonialsData.description;
   const testimonials = testimonialsData.page?.list || testimonialsData.list || [];
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+  const totalPages = Math.ceil(testimonials.length / itemsPerPage);
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const paginatedTestimonials = testimonials.slice(
+    startIndex,
+    startIndex + itemsPerPage,
+  );
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    const element = document.getElementById("testimonials-grid-start");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative w-full bg-[#FCFBF8] pt-8 sm:pt-10 lg:pt-12 pb-14 sm:pb-16 px-4 sm:px-6 lg:px-12 overflow-hidden">
-      <div className="max-w-[1340px] mx-auto relative z-10">
+      <div id="testimonials-grid-start" className="max-w-[1340px] mx-auto relative z-10">
         
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -45,13 +63,12 @@ export default function TestimonialsGrid({ data }: TestimonialsSectionProps) {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
-          {testimonials.map((item, index) => (
+          {paginatedTestimonials.map((item, index) => (
             <motion.div
-              key={`${item.id}-${index}`}
+              key={`${item.id}-${startIndex + index}`}
               initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: (index % 3) * 0.12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, delay: (index % 3) * 0.09 }}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
               className="group bg-white rounded-2xl p-6 sm:p-7 border border-[#ECE4D8] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col justify-between"
             >
@@ -108,6 +125,50 @@ export default function TestimonialsGrid({ data }: TestimonialsSectionProps) {
             </motion.div>
           ))}
         </div>
+
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2 mt-10 sm:mt-12">
+            <button
+              type="button"
+              onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+              disabled={currentPage === 1}
+              aria-label="Previous page"
+              className="w-10 h-10 rounded-full border border-[#E6DCD0] bg-white flex items-center justify-center text-[#2C221E] hover:border-[#8C6D48] hover:bg-[#8C6D48] hover:text-white disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 cursor-pointer shadow-xs"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+
+            {Array.from({ length: totalPages }).map((_, i) => {
+              const pageNum = i + 1;
+              const isActive = pageNum === currentPage;
+              return (
+                <button
+                  key={pageNum}
+                  type="button"
+                  onClick={() => handlePageChange(pageNum)}
+                  className={`w-10 h-10 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer shadow-xs ${
+                    isActive
+                      ? "bg-[#8C6D48] text-white shadow-md scale-105"
+                      : "bg-white text-[#2C221E] border border-[#E6DCD0] hover:border-[#8C6D48] hover:text-[#8C6D48]"
+                  }`}
+                >
+                  {pageNum}
+                </button>
+              );
+            })}
+
+            <button
+              type="button"
+              onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+              disabled={currentPage === totalPages}
+              aria-label="Next page"
+              className="w-10 h-10 rounded-full border border-[#E6DCD0] bg-white flex items-center justify-center text-[#2C221E] hover:border-[#8C6D48] hover:bg-[#8C6D48] hover:text-white disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 cursor-pointer shadow-xs"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
