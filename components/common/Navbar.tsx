@@ -142,12 +142,12 @@ export default function Navbar({ data }: NavbarSectionProps) {
           <div className="hidden lg:flex items-center">
             <Link
               href={ctaHref}
-              className="group inline-flex items-center bg-[#0d3929] hover:bg-[#0a2f22] border-[1.5px] border-[#c2782b] pl-5 pr-1.5 py-1.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#0d3929]/20"
+              className="group inline-flex items-center bg-[#0d3929] hover:bg-[#0a2f22] border-[1.5px] border-[#c2782b] pl-6 pr-1.5 py-1.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#0d3929]/20"
             >
-              <span className="text-white text-[14px] font-medium tracking-wide">
+              <span className="text-white text-[16px] font-medium tracking-wide">
                 {cta.text}
               </span>
-              <span className="ml-2.5 w-8 h-8 rounded-full bg-[#c2782b] group-hover:bg-[#d08332] text-white flex items-center justify-center shrink-0 transition-all duration-300 group-hover:translate-x-0.5">
+              <span className="ml-3 w-9 h-9 rounded-full bg-[#c2782b] group-hover:bg-[#d08332] text-white flex items-center justify-center shrink-0 transition-all duration-300 group-hover:translate-x-0.5">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
